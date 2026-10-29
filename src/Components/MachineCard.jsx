@@ -66,8 +66,21 @@ export default function MachineCard({
         tabIndex={-1}
       />
 
-      {/* 1. Top Image Showcase Stage */}
-      <div className="relative block w-full aspect-[4/3] bg-gradient-to-b from-blue-50/40 via-slate-50 to-slate-100/60 p-6 overflow-hidden border-b border-slate-100">
+      {/* 1. Dedicated Top Header: Category Name & ID Number (Never covered by image) */}
+      <div className="px-5 pt-3.5 pb-2.5 flex items-center justify-between border-b border-slate-100 bg-white relative z-10">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-blue-50 text-blue-700 border border-blue-200/80">
+          <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
+          {category}
+        </span>
+        {displayId && (
+          <span className="font-mono text-xs font-bold text-slate-500 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-200 shadow-xs">
+            {displayId}
+          </span>
+        )}
+      </div>
+
+      {/* 2. Top Image Showcase Stage */}
+      <div className="relative block w-full aspect-[4/3] bg-gradient-to-b from-blue-50/20 via-slate-50 to-slate-100/50 p-6 overflow-hidden border-b border-slate-100">
         {/* Subtle grid pattern background */}
         <div
           className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -76,19 +89,6 @@ export default function MachineCard({
             backgroundSize: "16px 16px",
           }}
         />
-
-        {/* Top Floating Badges */}
-        <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-white/95 text-blue-700 shadow-sm border border-blue-200/80 backdrop-blur-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
-            {category}
-          </span>
-          {displayId && (
-            <span className="font-mono text-xs font-bold text-slate-500 bg-white/90 px-2 py-0.5 rounded-md border border-slate-200/80 shadow-xs">
-              {displayId}
-            </span>
-          )}
-        </div>
 
         {/* Centered Machine Image */}
         <div className="w-full h-full flex items-center justify-center relative z-10">
