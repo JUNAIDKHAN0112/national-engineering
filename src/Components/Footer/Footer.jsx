@@ -23,6 +23,8 @@ export default function Footer() {
             <Link to="/services">Our expertise</Link>
             <Link to="/gallery">Plant gallery</Link>
             <Link to="/quote">Get in touch</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms &amp; Conditions</Link>
           </div>
           <div className="footer-contact">
             <h2>Let’s talk</h2>
@@ -56,6 +58,11 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} National Engineering Works</span>
+          <div className="footer-legal-links flex items-center gap-3">
+            <Link to="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link>
+            <span className="opacity-40">•</span>
+            <Link to="/terms" className="hover:text-blue-600 transition-colors">Terms &amp; Conditions</Link>
+          </div>
           <span>Built with purpose. Engineered to last.</span>
           <a href="#top">Back to top ↑</a>
         </div>

@@ -37,6 +37,8 @@ const BlowerMachine = lazy(() => import("./Components/Machines/Blower.jsx"));
 const RotaryAirlockPage = lazy(() => import("./Components/Machines/Rotary.jsx"));
 const RillMachine = lazy(() => import("./Components/Machines/Rill.jsx"));
 const MachineDetailTemplate = lazy(() => import("./Components/Machines/MachineDetailTemplate.jsx"));
+const PrivacyPolicy = lazy(() => import("./Components/Legal/PrivacyPolicy.jsx"));
+const TermsConditions = lazy(() => import("./Components/Legal/TermsConditions.jsx"));
 // Custom loading fallback component
 const LoadingFallback = () => (
   <div className="flex items-center justify-center h-screen">
@@ -94,6 +96,38 @@ const router = createBrowserRouter(
         element={
           <Suspense fallback={<LoadingFallback />}>
             <Services />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/privacy"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <PrivacyPolicy />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/privacy-policy"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <PrivacyPolicy />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/terms"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <TermsConditions />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/terms-and-conditions"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <TermsConditions />
           </Suspense>
         }
       />
