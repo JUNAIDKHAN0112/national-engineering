@@ -8,7 +8,8 @@ import { routes } from "./routes.jsx";
 const handler = createStaticHandler(routes);
 
 export async function renderPath(path) {
-  const request = new Request(`https://nationalengineeringworks.in${path}`);
+  const requestPath = path === "/" || path.endsWith("/") ? path : `${path}/`;
+  const request = new Request(`https://nationalengineeringworks.in${requestPath}`);
   const context = await handler.query(request);
   if (context instanceof Response) {
     throw new Error(`Could not prerender ${path}: ${context.status}`);
