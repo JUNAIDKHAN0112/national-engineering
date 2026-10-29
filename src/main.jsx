@@ -101,7 +101,7 @@ const router = createBrowserRouter(
         path="/destoner"
         element={
           <Suspense fallback={<LoadingFallback />}>
-            <DestonerMachine />
+            <MachineDetailTemplate slug="destoner" />
           </Suspense>
         }
       />
@@ -109,7 +109,7 @@ const router = createBrowserRouter(
         path="/elevator"
         element={
           <Suspense fallback={<LoadingFallback />}>
-            <ElevatorMachine />
+            <MachineDetailTemplate slug="elevator" />
           </Suspense>
         }
       />
@@ -117,7 +117,7 @@ const router = createBrowserRouter(
         path="/cyclone"
         element={
           <Suspense fallback={<LoadingFallback />}>
-            <HorizontalCycloneMachine />
+            <MachineDetailTemplate slug="cyclone" />
           </Suspense>
         }
       />
@@ -125,7 +125,7 @@ const router = createBrowserRouter(
         path="/fatka"
         element={
           <Suspense fallback={<LoadingFallback />}>
-            <FatkaMachinePage />
+            <MachineDetailTemplate slug="fatka" />
           </Suspense>
         }
       />
@@ -133,7 +133,7 @@ const router = createBrowserRouter(
         path="/buff"
         element={
           <Suspense fallback={<LoadingFallback />}>
-            <BuffPolisherPage />
+            <MachineDetailTemplate slug="buff" />
           </Suspense>
         }
       />
@@ -141,7 +141,7 @@ const router = createBrowserRouter(
         path="/dal"
         element={
           <Suspense fallback={<LoadingFallback />}>
-            <DalPolisherPage />
+            <MachineDetailTemplate slug="dal" />
           </Suspense>
         }
       />
@@ -149,7 +149,7 @@ const router = createBrowserRouter(
         path="/conveyor"
         element={
           <Suspense fallback={<LoadingFallback />}>
-            <ScrewConveyorPage />
+            <MachineDetailTemplate slug="conveyor" />
           </Suspense>
         }
       />
@@ -157,7 +157,7 @@ const router = createBrowserRouter(
         path="/blower"
         element={
           <Suspense fallback={<LoadingFallback />}>
-            <BlowerMachine />
+            <MachineDetailTemplate slug="blower" />
           </Suspense>
         }
       />
@@ -165,7 +165,7 @@ const router = createBrowserRouter(
         path="/rotary"
         element={
           <Suspense fallback={<LoadingFallback />}>
-            <RotaryAirlockPage />
+            <MachineDetailTemplate slug="rotary" />
           </Suspense>
         }
       />
@@ -173,7 +173,7 @@ const router = createBrowserRouter(
         path="/rill"
         element={
           <Suspense fallback={<LoadingFallback />}>
-            <RillMachine />
+            <MachineDetailTemplate slug="rill" />
           </Suspense>
         }
       />
@@ -330,9 +330,25 @@ const router = createBrowserRouter(
           </Suspense>
         }
       />
+      <Route
+        path="/milling"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MillingPage />
+          </Suspense>
+        }
+      />
 
       <Route
         path="/Handling-conveying"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <HandlingPage />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/handling-conveying"
         element={
           <Suspense fallback={<LoadingFallback />}>
             <HandlingPage />
@@ -348,6 +364,14 @@ const router = createBrowserRouter(
           </Suspense>
         }
       />
+      <Route
+        path="/finishing"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <FinishingPage />
+          </Suspense>
+        }
+      />
 
       <Route
         path="/Dust-controlling"
@@ -357,10 +381,25 @@ const router = createBrowserRouter(
           </Suspense>
         }
       />  
-
+      <Route
+        path="/dust-controlling"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <DustPage />
+          </Suspense>
+        }
+      />  
 
       <Route
         path="/Cleaning-separating"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <CleaningPage />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/cleaning-separating"
         element={
           <Suspense fallback={<LoadingFallback />}>
             <CleaningPage />

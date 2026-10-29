@@ -16,31 +16,63 @@ const categoryDropdownItems = [
     name: "Cleaning & separation",
     path: "/Cleaning-separating",
     desc: "De-stoners, multi-purpose cleaners, round separators, fatka & rills",
+    quickLinks: [
+      { name: "Multi-Purpose Cleaner", path: "/multi-purpose-cleaner" },
+      { name: "De-Stoner", path: "/destoner" },
+      { name: "Round Separator", path: "/round-separator" },
+      { name: "Fatka", path: "/fatka" },
+      { name: "Rill", path: "/rill" },
+    ],
   },
   {
     name: "Milling & processing",
     path: "/Milling",
     desc: "Rice silky polishers, dal polishers, mixer machines, buffing & hullers",
+    quickLinks: [
+      { name: "Rice Silky", path: "/rice-silky" },
+      { name: "Dal Polisher", path: "/dal" },
+      { name: "Mixer Machine", path: "/mixer-machine" },
+      { name: "Buff Polisher", path: "/buff" },
+    ],
   },
   {
     name: "Material handling",
     path: "/Handling-conveying",
     desc: "Bucket elevators, screw conveyors & Z-elevators",
+    quickLinks: [
+      { name: "Elevator", path: "/elevator" },
+      { name: "Screw Conveyor", path: "/conveyor" },
+      { name: "Z-Elevator", path: "/z-elevator" },
+    ],
   },
   {
     name: "Dust management",
     path: "/Dust-controlling",
     desc: "Rotary airlocks, blowers & aspiration chambers",
+    quickLinks: [
+      { name: "Rotary Airlock", path: "/rotary" },
+      { name: "Blower Machine", path: "/blower" },
+      { name: "Cyclone", path: "/cyclone" },
+    ],
   },
   {
     name: "Finishing & grading",
     path: "/Finishing",
     desc: "Plan swifters, round graders, drum sieves & gravity separators",
+    quickLinks: [
+      { name: "Plan Swifter", path: "/plan-swifter" },
+      { name: "Round Grader", path: "/round-grader" },
+      { name: "Gravity Separator", path: "/gravity-separator" },
+    ],
   },
   {
     name: "Turnkey plant lines",
     path: "/turnkey",
     desc: "Integrated pulse, grain & dal processing solutions",
+    quickLinks: [
+      { name: "Dal Mill Plant", path: "/turnkey" },
+      { name: "Cleaning Line", path: "/Cleaning-separating" },
+    ],
   },
 ];
 
@@ -180,17 +212,36 @@ export default function Navbar() {
                     </div>
                     <div className="nav-dropdown-grid">
                       {categoryDropdownItems.map((item, index) => (
-                        <Link
+                        <div
                           key={item.name}
-                          to={item.path}
                           className="nav-dropdown-card"
                         >
                           <span className="dropdown-card-num">0{index + 1}</span>
-                          <div>
-                            <h4>{item.name}</h4>
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <Link
+                              to={item.path}
+                              className="nav-dropdown-card-title flex items-center justify-between"
+                            >
+                              <h4>{item.name}</h4>
+                              <span className="text-slate-400 text-xs">→</span>
+                            </Link>
                             <p>{item.desc}</p>
+                            {item.quickLinks && (
+                              <div className="mt-2 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
+                                {item.quickLinks.map((ql) => (
+                                  <Link
+                                    key={ql.name}
+                                    to={ql.path}
+                                    className="inline-block px-1.5 py-0.5 rounded text-[10px] font-semibold text-blue-700 bg-blue-50/80 hover:bg-blue-600 hover:text-white transition"
+                                    onClick={() => setOpen(false)}
+                                  >
+                                    {ql.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
                           </div>
-                        </Link>
+                        </div>
                       ))}
                     </div>
                     <div className="nav-dropdown-footer">

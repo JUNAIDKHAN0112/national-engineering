@@ -594,3 +594,4 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
 MachineDetailTemplate.propTypes = {
   slug: PropTypes.string,
 };
+
