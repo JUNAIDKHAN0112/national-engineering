@@ -15,12 +15,12 @@ const categoryDropdownItems = [
   {
     name: "Cleaning & separation",
     path: "/Cleaning-separating",
-    desc: "De-stoners, fatka machines, rill screens & cyclones",
+    desc: "De-stoners, multi-purpose cleaners, round separators, fatka & rills",
   },
   {
     name: "Milling & processing",
     path: "/Milling",
-    desc: "Dal polishers, buffing units, emery rolls & hullers",
+    desc: "Rice silky polishers, dal polishers, mixer machines, buffing & hullers",
   },
   {
     name: "Material handling",
@@ -35,7 +35,7 @@ const categoryDropdownItems = [
   {
     name: "Finishing & grading",
     path: "/Finishing",
-    desc: "Round graders, drum sieves & gravity separators",
+    desc: "Plan swifters, round graders, drum sieves & gravity separators",
   },
   {
     name: "Turnkey plant lines",
