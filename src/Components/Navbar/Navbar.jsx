@@ -188,8 +188,17 @@ export default function Navbar() {
                       {services.map((service) => (
                         <Link
                           key={service.number}
-                          to="/services"
+                          to={service.id ? `/services#${service.id}` : "/services"}
                           className="nav-dropdown-card"
+                          onClick={() => {
+                            setOpen(false);
+                            if (service.id) {
+                              setTimeout(() => {
+                                const el = document.getElementById(service.id);
+                                if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                              }, 100);
+                            }
+                          }}
                         >
                           <span className="dropdown-card-num">{service.number}</span>
                           <div>
