@@ -36,6 +36,7 @@ const ScrewConveyorPage = lazy(() => import("./Components/Machines/Coneyor.jsx")
 const BlowerMachine = lazy(() => import("./Components/Machines/Blower.jsx"));
 const RotaryAirlockPage = lazy(() => import("./Components/Machines/Rotary.jsx"));
 const RillMachine = lazy(() => import("./Components/Machines/Rill.jsx"));
+const MachineDetailTemplate = lazy(() => import("./Components/Machines/MachineDetailTemplate.jsx"));
 // Custom loading fallback component
 const LoadingFallback = () => (
   <div className="flex items-center justify-center h-screen">
@@ -173,6 +174,142 @@ const router = createBrowserRouter(
         element={
           <Suspense fallback={<LoadingFallback />}>
             <RillMachine />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/multi-purpose-cleaner"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="multi-purpose-cleaner" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/round-separator"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="round-separator" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/rice-silky"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="rice-silky" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/mixer-machine"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="mixer-machine" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/plan-swifter"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="plan-swifter" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/vibro-classifier"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="vibro-classifier" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/z-elevator"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="z-elevator" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/emery-roll-dal"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="emery-roll-dal" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/dal-huller"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="dal-huller" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/centrifugal-blower"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="centrifugal-blower" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/air-box"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="air-box" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/air-box-clean-machine"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="air-box-clean-machine" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/round-grader"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="round-grader" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/drum-sieve"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="drum-sieve" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/gravity-separator"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="gravity-separator" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/expression-channel"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate slug="expression-channel" />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/machine/:slug"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <MachineDetailTemplate />
           </Suspense>
         }
       />

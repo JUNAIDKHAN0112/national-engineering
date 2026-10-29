@@ -120,7 +120,7 @@ export const machines = [
   {
     id: 5,
     slug: 'air-box-clean-machine',
-    link: '/Cleaning-separating',
+    link: '/air-box-clean-machine',
     name: 'Air Box Clean Machine',
     desc: 'Ensures effective removal of dust and light particles from grain flow.',
     img: '/Images/Air-box.jpg',
@@ -139,7 +139,7 @@ export const machines = [
   {
     id: 6,
     slug: 'vibro-classifier',
-    link: '/Cleaning-separating',
+    link: '/vibro-classifier',
     name: 'Vibro Classifier',
     desc: 'Classifies and separates particles based on size using vibration technology.',
     img: '/Images/vibro-classifier.jpg',
@@ -158,7 +158,7 @@ export const machines = [
   {
     id: 24,
     slug: 'multi-purpose-cleaner',
-    link: '/Cleaning-separating',
+    link: '/multi-purpose-cleaner',
     name: 'Multi-Purpose Cleaner',
     desc: 'Versatile grain and seed cleaner integrating air aspiration with multi-deck vibrating sieves.',
     img: '/Images/multi-purpose-cleaner.jpg',
@@ -177,7 +177,7 @@ export const machines = [
   {
     id: 25,
     slug: 'round-separator',
-    link: '/Cleaning-separating',
+    link: '/round-separator',
     name: 'Round Separator',
     desc: 'Circular vibro sifter and grader for multi-fraction particle separation and dedusting.',
     img: '/Images/round-separator.jpg',
@@ -236,7 +236,7 @@ export const machines = [
   {
     id: 9,
     slug: 'emery-roll-dal',
-    link: '/Milling',
+    link: '/emery-roll-dal',
     name: 'Emery Roll Dal',
     desc: 'Removes outer layers of pulses efficiently using emery rollers.',
     img: '/Images/Emery-Roll.jpg',
@@ -255,7 +255,7 @@ export const machines = [
   {
     id: 10,
     slug: 'dal-huller',
-    link: '/Milling',
+    link: '/dal-huller',
     name: 'DaL Huller',
     desc: 'Removes husks and hulls from grains and pulses with precision.',
     img: '/Images/Dal-Huller.jpg',
@@ -274,7 +274,7 @@ export const machines = [
   {
     id: 26,
     slug: 'rice-silky',
-    link: '/Milling',
+    link: '/rice-silky',
     name: 'Rice Silky Polisher',
     desc: 'Advanced water-mist friction polisher delivering silky luster and pristine kernel clarity.',
     img: '/Images/rice-silky.jpg',
@@ -293,7 +293,7 @@ export const machines = [
   {
     id: 27,
     slug: 'mixer-machine',
-    link: '/Milling',
+    link: '/mixer-machine',
     name: 'Mixer Machine',
     desc: 'Horizontal ribbon blender for uniform batch mixing of grains, pulses, flours, and seasonings.',
     img: '/Images/mixer-machine.jpg',
@@ -352,7 +352,7 @@ export const machines = [
   {
     id: 14,
     slug: 'z-elevator',
-    link: '/Handling-conveying',
+    link: '/z-elevator',
     name: 'Z Elevator',
     desc: 'Efficiently lifts materials between floors using Z-shaped design.',
     img: '/Images/Z-elevator.jpg',
@@ -371,7 +371,7 @@ export const machines = [
   {
     id: 15,
     slug: 'expression-channel',
-    link: '/Handling-conveying',
+    link: '/expression-channel',
     name: 'Expression Channel',
     desc: 'Channels and guides material flow in processing lines.',
     img: '/Images/Expression.jpg',
@@ -430,7 +430,7 @@ export const machines = [
   {
     id: 18,
     slug: 'centrifugal-blower',
-    link: '/Dust-controlling',
+    link: '/centrifugal-blower',
     name: 'Centrifugal Blower',
     desc: 'Generates high-pressure air for ventilation and dust removal.',
     img: '/Images/Centrifugal.jpg',
@@ -449,7 +449,7 @@ export const machines = [
   {
     id: 19,
     slug: 'air-box',
-    link: '/Dust-controlling',
+    link: '/air-box',
     name: 'Air Box',
     desc: 'Air-handling unit that supports dust separation and flow control.',
     img: '/Images/Air-box.jpg',
@@ -470,7 +470,7 @@ export const machines = [
   {
     id: 20,
     slug: 'round-grader',
-    link: '/Finishing',
+    link: '/round-grader',
     name: 'Round Grader',
     desc: 'Separates grains based on size for high-quality final output.',
     img: '/Images/Round-grader.jpg',
@@ -489,7 +489,7 @@ export const machines = [
   {
     id: 21,
     slug: 'drum-sieve',
-    link: '/Finishing',
+    link: '/drum-sieve',
     name: 'Drum Sieve',
     desc: 'Ensures fine grain separation for finishing stages.',
     img: '/Images/Drum.jpg',
@@ -508,7 +508,7 @@ export const machines = [
   {
     id: 22,
     slug: 'gravity-separator',
-    link: '/Finishing',
+    link: '/gravity-separator',
     name: 'Gravity Separator',
     desc: 'Separates grains based on density for top-grade sorting.',
     img: '/Images/Manual.jpg',
@@ -527,7 +527,7 @@ export const machines = [
   {
     id: 28,
     slug: 'plan-swifter',
-    link: '/Finishing',
+    link: '/plan-swifter',
     name: 'Plan Swifter',
     desc: 'Multi-deck gyratory sifting machine delivering high-capacity size separation and grading.',
     img: '/Images/plan-swifter.jpg',
