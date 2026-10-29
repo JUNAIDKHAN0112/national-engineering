@@ -79,17 +79,8 @@ export default function MachineCard({
         )}
       </div>
 
-      {/* 2. Top Image Showcase Stage */}
-      <div className="relative block w-full aspect-[4/3] bg-gradient-to-b from-blue-50/20 via-slate-50 to-slate-100/50 p-6 overflow-hidden border-b border-slate-100">
-        {/* Subtle grid pattern background */}
-        <div
-          className="absolute inset-0 opacity-[0.03] pointer-events-none"
-          style={{
-            backgroundImage: "radial-gradient(#1e40af 1px, transparent 1px)",
-            backgroundSize: "16px 16px",
-          }}
-        />
-
+      {/* 2. Top Image Showcase Stage (Seamless Pure White Matching Card Border) */}
+      <div className="relative block w-full aspect-[4/3] bg-white p-5 overflow-hidden border-b border-slate-100">
         {/* Centered Machine Image */}
         <div className="w-full h-full flex items-center justify-center relative z-10">
           <img
@@ -102,7 +93,7 @@ export default function MachineCard({
                 e.currentTarget.src = fallback;
               }
             }}
-            className="w-full h-full object-contain filter saturate-[0.95] group-hover:saturate-100 group-hover:scale-105 group-hover:-translate-y-1 transition-all duration-500"
+            className="w-full h-full object-contain mix-blend-multiply filter saturate-[0.95] group-hover:saturate-100 group-hover:scale-105 group-hover:-translate-y-1 transition-all duration-500"
           />
         </div>
 

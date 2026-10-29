@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { company } from "../../Data/Machines";
 import { Arrow } from "../UI";
 
-export const plantInstallations = [
+const plantInstallations = [
   {
     id: 1,
     title: "Automated Multi-Tier Dal Mill Complex",

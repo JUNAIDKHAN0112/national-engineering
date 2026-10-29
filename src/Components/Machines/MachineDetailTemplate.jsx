@@ -149,16 +149,7 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
 
           {/* Right Column: Studio Showcase Pedestal */}
           <div className="lg:col-span-5">
-            <div className="relative rounded-3xl bg-gradient-to-b from-blue-50/70 via-white to-slate-100/60 border border-blue-100 p-8 shadow-xl shadow-slate-200/50 flex flex-col items-center justify-center overflow-hidden">
-              {/* Subtle architectural grid pattern */}
-              <div
-                className="absolute inset-0 opacity-[0.04] pointer-events-none"
-                style={{
-                  backgroundImage: "radial-gradient(#1d4ed8 1px, transparent 1px)",
-                  backgroundSize: "20px 20px",
-                }}
-              />
-
+            <div className="relative rounded-3xl bg-white border border-blue-200/90 p-8 shadow-xl shadow-slate-200/50 flex flex-col items-center justify-center overflow-hidden">
               {/* Floating Engineering Badge */}
               <div className="w-full flex items-center justify-between text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-4 relative z-10">
                 <span className="flex items-center gap-1.5 text-blue-700">
@@ -182,7 +173,7 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
                       e.currentTarget.src = fallback;
                     }
                   }}
-                  className="w-full h-full object-contain filter saturate-[0.98] drop-shadow-md hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain mix-blend-multiply filter saturate-[0.98] hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
@@ -537,7 +528,7 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
                   <img
                     src={rel.img}
                     alt={rel.name}
-                    className="w-full h-full object-contain filter saturate-[0.92] group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain mix-blend-multiply filter saturate-[0.92] group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <span className="text-[10px] uppercase font-bold tracking-wider text-blue-700 block mb-1">
