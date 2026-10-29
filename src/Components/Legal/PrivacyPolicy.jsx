@@ -1,8 +1,6 @@
 // src/Components/Legal/PrivacyPolicy.jsx
 "use client";
-import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { company } from "../../Data/Machines";
 
 export default function PrivacyPolicy() {
@@ -188,3 +186,4 @@ export default function PrivacyPolicy() {
     </div>
   );
 }
+

@@ -1,6 +1,6 @@
 // src/Components/Products/Products.jsx
 "use client";
-import React, { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { machines, categories, company } from "../../Data/Machines";
@@ -87,7 +87,7 @@ export default function AdvancedMachinesPage() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-blue-50 text-blue-700 border border-blue-200/90 shadow-xs mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-            ENGINEERED IN SOLAPUR, MAHARASHTRA • EST. 2010
+            GRAIN & PULSE MACHINERY • SOLAPUR, MAHARASHTRA
           </motion.div>
 
           <motion.h1
@@ -130,21 +130,21 @@ export default function AdvancedMachinesPage() {
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
-              <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">06</span>
+              <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">{categories.length - 1}</span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
                 Process Categories
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
-              <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">100%</span>
+              <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">Solapur</span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
-                Custom Layouts
+                Maharashtra
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
-              <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">24/7</span>
+              <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">Enquire</span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
-                Support & Spares
+                For Product Details
               </span>
             </div>
           </motion.div>

@@ -1,6 +1,5 @@
 // src/Components/Products/dust-controlling.jsx
 "use client";
-import React from "react";
 import { Link } from "react-router-dom";
 import SectionHeader from "../SectionHeader";
 import MachineCard from "../MachineCard";
@@ -26,7 +25,7 @@ export default function DustPage() {
 
         <SectionHeader
           title="Dust Controlling"
-          subtitle="Industrial cyclones, rotary airlocks, and high-pressure aspiration blowers engineered to maintain clean air standards and efficient dust isolation."
+          subtitle="Explore cyclones, rotary airlocks, and aspiration blowers for dust collection and air handling in grain and pulse processing plants."
         />
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-10">

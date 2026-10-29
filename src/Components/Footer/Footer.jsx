@@ -14,7 +14,7 @@ export default function Footer() {
               <br />
               Lasting partnerships.
             </p>
-            <span className="small-label">SOLAPUR, INDIA · EST. 2010</span>
+            <span className="small-label">SOLAPUR, MAHARASHTRA, INDIA</span>
           </div>
           <div>
             <h2>Discover</h2>

@@ -10,7 +10,7 @@ export default function About() {
   return (
     <>
       <PageIntro
-        eyebrow="OUR STORY / EST. 2010"
+        eyebrow="ABOUT NATIONAL ENGINEERING WORKS"
         title={
           <>
             Built on experience.
@@ -19,9 +19,9 @@ export default function About() {
           </>
         }
       >
-        From our manufacturing base in Chincholi MIDC, Solapur, we bring
-        practical engineering and manufacturing excellence to the machinery
-        that powers food processing across India.
+        National Engineering Works is based in Chincholi MIDC, Solapur,
+        Maharashtra. The catalogue covers grain and pulse processing machinery
+        for cleaning, milling, handling, dust control and grading.
       </PageIntro>
 
       <div className="container about-cover">
@@ -55,18 +55,17 @@ export default function About() {
               operators who work with the machinery every day.
             </p>
             <p>
-              Established in 2010, National Engineering Works manufactures food
-              processing machinery and delivers complete turnkey pulse and grain
-              processing plant lines. Based in C-162, Chincholi MIDC, Solapur,
-              our work integrates heavy fabrication, precision sizing,
-              pneumatic aspiration, and reliable material handling.
+              National Engineering Works is based at C-162, Chincholi MIDC,
+              Solapur, Maharashtra. The catalogue includes individual machines
+              and equipment for grain and pulse processing plants. Product
+              configuration depends on the crop, process stages and site
+              requirements.
             </p>
             <p>
-              Under the guidance of Irshad Khan, our engineering team works
-              closely with millers and plant owners to understand specific crop
-              and capacity requirements. From individual de-stoners, fatkas,
-              and polishers to multi-floor automated plant installations, we
-              stand behind every machine with enduring service support.
+              For a product enquiry, share the crop or material, the process
+              stage, expected throughput and site details. Contact the Solapur
+              team to confirm machine suitability, specifications and available
+              project support.
             </p>
             <ButtonLink to="/quote" secondary>
               Meet your next engineering partner
@@ -92,17 +91,17 @@ export default function About() {
               [
                 "01",
                 "Application-Led Design",
-                "Every machine begins with the grain and target output. We analyze the crop characteristics, moisture, and layout constraints before fabrication.",
+                "Machine selection depends on the crop or material, process stage, target throughput and available site layout.",
               ],
               [
                 "02",
                 "Rugged Craftsmanship",
-                "Industrial manufacturing built with heavy-gauge steel, dynamic balancing, and high-grade bearings suited for round-the-clock commercial milling.",
+                "Ask the team to confirm materials, construction details and operating requirements for the machine you are considering.",
               ],
               [
                 "03",
                 "Lasting Relationships",
-                "Direct partnership with the technicians and founders who built your equipment, from initial line layout through commissioning and scheduled maintenance.",
+                "Share your application and site requirements so the team can discuss equipment options and project support.",
               ],
             ].map(([number, title, copy]) => (
               <article key={number}>

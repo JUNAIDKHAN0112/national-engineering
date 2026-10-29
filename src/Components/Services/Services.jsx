@@ -1,9 +1,9 @@
 // src/Components/Services/Services.jsx
+/* eslint-disable react-refresh/only-export-components */
 "use client";
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { company, services } from "../../Data/Machines";
+import { company } from "../../Data/Machines";
 import { Arrow } from "../UI";
 
 export const plantSolutions = [
@@ -11,13 +11,12 @@ export const plantSolutions = [
     id: "dal-mill",
     title: "Turnkey Dal Processing Plants",
     eyebrow: "COMPLETE PULSE MILLING INFRASTRUCTURE",
-    capacity: "10 TPD to 100+ TPD Custom Capacities",
+    capacity: "Throughput discussed per enquiry",
     img: "/Images/Plant-1.jpg",
-    location: "Solapur, Maharashtra",
     shortDesc:
-      "End-to-end automated pulse milling installations from raw crop intake and de-husking through splitting, polishing, and sizing to finished bagging.",
+      "Pulse processing may combine crop cleaning, conditioning, de-husking, separation and finishing equipment. The process sequence depends on the pulse, product, site and expected throughput.",
     fullDesc:
-      "We engineer, fabricate, and commission complete automated Dal Mills tailored for high-recovery processing of Toor (Pigeon Pea), Chana (Chickpea), Moong (Green Gram), Urad (Black Gram), and Masoor (Lentil). Every plant is custom-designed around your available floor area, building ceiling heights, and target daily throughput. Designed with our heavy-duty Fatka hullers, De-Stoners, and Dal Polishers to deliver maximum finished recovery, minimal kernel breakage, and clean, dust-free factory floors.",
+      "A dal processing line may include cleaning, conditioning, de-husking, separation, grading and conveying equipment. The final process and machinery should be selected for the pulse, product, available site and target throughput.",
     processSteps: [
       {
         step: "01",
@@ -67,23 +66,21 @@ export const plantSolutions = [
       "Masoor Dal (Lentil)",
     ],
     highlights: [
-      "Over 98% hull detachment efficiency with minimal broken loss",
-      "Breakage reduced by up to 40% compared to traditional mills",
-      "Custom 3D CAD layout matching facility height and column spans",
-      "Centralized electrical panel with interlocked safety controls",
+      "Process stages selected for the product and site",
+      "Equipment options include cleaning, de-husking and grading",
+      "Discuss throughput and layout requirements during enquiry",
     ],
   },
   {
     id: "rice-mill",
     title: "Modern Rice Milling & Polishing Plants",
     eyebrow: "PADDY TO GRADE-A TRANSLUCENT RICE",
-    capacity: "20 TPD to 120 TPD Capacities",
+    capacity: "Throughput discussed per enquiry",
     img: "/Images/rice-mill.jpg",
-    location: "Raichur, Karnataka",
     shortDesc:
-      "Advanced paddy processing lines featuring high-efficiency de-stoning, rubber roll hulling, silky water-mist friction polishing, and thickness grading.",
+      "Rice processing may involve paddy cleaning, de-stoning, hulling, polishing and grading. Equipment options depend on the paddy and required process.",
     fullDesc:
-      "Engineered for both parboiled and raw white paddy, our complete rice processing installations maximize head-rice yield and deliver the flawless mirror-like finish demanded by domestic and export rice markets. Every transfer between machines uses slow-speed elevators and low-friction chutes to prevent grain thermal stress and internal micro-cracking.",
+      "A rice processing line may combine paddy cleaning, de-stoning, hulling, polishing, grading and material handling. Confirm the machinery and process against your paddy, output goals and site requirements.",
     processSteps: [
       {
         step: "01",
@@ -98,7 +95,7 @@ export const plantSolutions = [
       {
         step: "03",
         title: "Gentle Rubber Roll Hulling",
-        desc: "Pneumatic or counter-rotating rubber rolls strip the husk with over 90% single-pass efficiency.",
+        desc: "Hulling equipment removes husk from paddy; suitable machinery depends on the paddy and process requirements.",
       },
       {
         step: "04",
@@ -132,23 +129,21 @@ export const plantSolutions = [
       "Kolam Rice",
     ],
     highlights: [
-      "Highest head-rice recovery yield with minimum broken percentages",
-      "Mirror-smooth translucent finish without chemical polishing agents",
-      "Continuous automatic feed regulation matching upstream supply",
-      "Comprehensive husk and fine bran collection lines",
+      "Process options for paddy cleaning, hulling and polishing",
+      "Grading and material handling options from the machinery catalogue",
+      "Discuss the required output and site during enquiry",
     ],
   },
   {
     id: "cleaning-plant",
     title: "Commercial Grain & Seed Cleaning Lines",
     eyebrow: "PRECISION CLEANING & GRAVITY SORTING",
-    capacity: "15 TPH to 60 TPH Grain Intake",
+    capacity: "Throughput discussed per enquiry",
     img: "/Images/cleaning-plant.jpg",
-    location: "Latur, Maharashtra",
     shortDesc:
-      "High-throughput raw crop cleaning plants engineered to eliminate stones, dust, weeds, and immature seeds for milling intake and commercial seed packing.",
+      "Grain cleaning equipment can include screening, aspiration, de-stoning and grading stages. The machine selection depends on the crop and the impurities to remove.",
     fullDesc:
-      "Intake purity is the foundation of every food processing facility. Our custom grain cleaning lines integrate pre-scalpers, multi-deck vibrating screeners, high-velocity air aspiration chambers, magnetic separators, and specific gravity sorting tables to clean agricultural harvests up to 99.8% commercial purity.",
+      "A cleaning line may combine pre-cleaning, screening, aspiration, de-stoning and grading. The process should be selected for the crop, material condition and required downstream use.",
     processSteps: [
       {
         step: "01",
@@ -194,23 +189,21 @@ export const plantSolutions = [
       "Pulses",
     ],
     highlights: [
-      "Achieves up to 99.8% grain purity in a single continuous pass",
-      "Protects downstream milling machinery from premature wear",
-      "High intake handling up to 60 metric tons per hour",
-      "Completely enclosed dust-tight design for clean air standards",
+      "Cleaning stages selected for the crop and impurities",
+      "Catalogue options include screening and de-stoning machinery",
+      "Discuss throughput and downstream process requirements",
     ],
   },
   {
     id: "dust-plant",
     title: "Centralized Pneumatic Dust Control & Aspiration",
     eyebrow: "FACTORY AIR HYGIENE & PARTICULATE RECOVERY",
-    capacity: "10,000 to 50,000+ CFM Custom Networks",
+    capacity: "Airflow discussed per enquiry",
     img: "/Images/Plant-5.jpg",
-    location: "Kalaburagi, Karnataka",
     shortDesc:
-      "Comprehensive plant-wide dust extraction networks using high-pressure centrifugal blowers, cyclones, and rotary airlocks for clean, safe factory floors.",
+      "Dust control options include blowers, cyclones, rotary airlocks and ducting. Equipment and layout depend on the plant and dust collection points.",
     fullDesc:
-      "Food processing factories generate tremendous amounts of airborne grain dust, husk chaff, and particulate fines that endanger worker health, increase explosion hazards, and foul machinery bearings. We design balanced central ducting networks that continuously aspirate dust at every equipment transfer point, maintaining clean factory floors and collecting valuable by-products like husk and bran.",
+      "A dust control system may include capture hoods, ducting, blowers, cyclones and rotary airlocks. The required arrangement depends on the plant layout, equipment and material flow.",
     processSteps: [
       {
         step: "01",
@@ -225,7 +218,7 @@ export const plantSolutions = [
       {
         step: "03",
         title: "Centrifugal Vortex Separation",
-        desc: "High-efficiency cyclone collectors separate 95%+ of airborne particulate from the moving air stream.",
+        desc: "Cyclones can be used to separate collected material from an air stream; suitability depends on the system design.",
       },
       {
         step: "04",
@@ -253,23 +246,21 @@ export const plantSolutions = [
       "Spice Powders",
     ],
     highlights: [
-      "Compliant with industrial workplace health and safety norms",
-      "Prevents abrasive dust from penetrating electric motors and bearings",
-      "Continuous automated solids discharge without line stops",
-      "Reduces factory cleaning maintenance and downtime by up to 80%",
+      "Catalogue options include blowers, cyclones and rotary airlocks",
+      "Equipment selection depends on plant layout and collection points",
+      "Discuss operating requirements and material flow during enquiry",
     ],
   },
   {
     id: "conveying-plant",
     title: "Bulk Material Handling & Elevation Grids",
     eyebrow: "SEAMLESS INTER-EQUIPMENT CONVEYANCE",
-    capacity: "5 TPH to 150 TPH Continuous Transfer",
+    capacity: "Throughput discussed per enquiry",
     img: "/Images/Plant-6.jpg",
-    location: "Akola, Maharashtra",
     shortDesc:
-      "Heavy-duty bucket elevators, Z-type continuous cup elevators, tubular screw conveyors, and gravity chutes connecting all plant machinery seamlessly.",
+      "Material handling options include bucket elevators, Z-elevators, screw conveyors and gravity chutes. Equipment depends on product, route and site layout.",
     fullDesc:
-      "Smooth, zero-spill material handling is the backbone of an efficient food factory. We manufacture heavy-gauge industrial bucket elevators with self-cleaning boot designs, low-breakage continuous cup belts, dust-tight screw conveyors, and lined gravity chutes that connect multi-floor machinery into an uninterrupted automated production flow.",
+      "A material handling layout may use elevators, conveyors and chutes to move product between process stages. Select equipment for the material, transfer route and plant arrangement.",
     processSteps: [
       {
         step: "01",
@@ -307,23 +298,21 @@ export const plantSolutions = [
       "Commercial Seeds",
     ],
     highlights: [
-      "Anti-breakage low-friction design preserving grain integrity",
-      "Sealed outboard bearings protected from dust ingress",
-      "Quick-access inspection doors and clean-out slides on all boots",
-      "Modular flanged sections for easy plant expansion",
+      "Catalogue options include elevators and conveyors",
+      "Transfer route and material inform equipment selection",
+      "Discuss plant layout and throughput during enquiry",
     ],
   },
   {
     id: "finishing-plant",
     title: "Turnkey Finishing, Plansifting & Grading Lines",
-    eyebrow: "EXPORT-GRADE SIZING & PURITY CLASSIFICATION",
-    capacity: "20 TPD to 80 TPD Precision Grading",
+    eyebrow: "SIZING & GRADE CLASSIFICATION",
+    capacity: "Throughput discussed per enquiry",
     img: "/Images/Plant-7.jpg",
-    location: "Nanded, Maharashtra",
     shortDesc:
-      "Multi-deck gyratory plansifters, rotary drum screens, round graders, and specific gravity sorting tables for export-grade grain classification.",
+      "Finishing and grading options include plansifters, drum screens, round graders and gravity separators. The right arrangement depends on product and target grades.",
     fullDesc:
-      "Final sizing and grading determines the market value of your processed pulses and grains. Our finishing installations sort materials into multiple discrete size, thickness, and density fractions. Split dal, unhusked grains, broken tips, and premium whole kernels are separated with surgical precision before reaching the packing silos.",
+      "Finishing lines may combine screening, plansifting, grading and separation equipment. The sequence and screen selection depend on the material and required product grades.",
     processSteps: [
       {
         step: "01",
@@ -366,17 +355,14 @@ export const plantSolutions = [
       "Besan / Gram Flour",
     ],
     highlights: [
-      "Enables premium price realization for Grade-A export grain",
-      "Simultaneous separation into up to 5 discrete fractions",
-      "Quick screen changes for switching between crop types",
-      "Ball-cleaner elastomer pads preventing screen blinding",
+      "Catalogue options include grading and screening equipment",
+      "Screen and process selection depends on the product",
+      "Discuss target grades and throughput during enquiry",
     ],
   },
 ];
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState("all");
-
   const scrollToPlant = (id) => {
     const el = document.getElementById(id);
     if (el) {
@@ -408,7 +394,7 @@ export default function Services() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-blue-50 text-blue-700 border border-blue-200/90 shadow-xs mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-            TURNKEY PLANT ENGINEERING &amp; COMMISSIONING • SOLAPUR, MAHARASHTRA
+            GRAIN &amp; PULSE PROCESSING • SOLAPUR, MAHARASHTRA
           </motion.div>
 
           <motion.h1
@@ -417,10 +403,10 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6"
           >
-            Complete Processing Plants.
+            Grain &amp; Pulse Processing
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600">
-              Built to Perform for Decades.
+              Plant Solutions.
             </span>
           </motion.h1>
 
@@ -430,13 +416,12 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10"
           >
-            From raw crop intake and high-yield de-husking to silky polishing
-            and precision export grading. We design, fabricate, and commission
-            complete industrial food processing facilities tailored to your space
-            and capacity goals.
+            Explore equipment for cleaning, milling, material handling, dust
+            control and grading. Plant requirements depend on your crop, process,
+            throughput and site.
           </motion.p>
 
-          {/* Quick Metrics Bar: Clean White Glass Cards with Royal Blue Accents */}
+          {/* Processing areas */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -445,34 +430,34 @@ export default function Services() {
           >
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
               <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">
-                150+
+                Dal
               </span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
-                Plants Delivered
+                Milling
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
               <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">
-                10 - 120
+                Rice
               </span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
-                TPD Capacity Range
+                Processing
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
               <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">
-                99.8%
+                Grain
               </span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
-                Output Purity
+                Cleaning
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
               <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">
-                Pan-India
+                Grading
               </span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
-                Erection &amp; Spares
+                &amp; Finishing
               </span>
             </div>
           </motion.div>
@@ -527,14 +512,9 @@ export default function Services() {
                     {plant.title}
                   </h2>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200/80">
-                    {plant.capacity}
-                  </span>
-                  <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
-                    📍 {plant.location}
-                  </span>
-                </div>
+                <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                  Discuss throughput and configuration
+                </span>
               </div>
 
               {/* Main Visual & Overview Grid */}
@@ -551,7 +531,7 @@ export default function Services() {
                       alt={plant.title}
                       loading="lazy"
                       onError={(e) => {
-                        const fallback = "/Images/turnkey.jpg";
+                        const fallback = "/Images/Plant-1.jpg";
                         if (!e.currentTarget.src.endsWith(fallback)) {
                           e.currentTarget.src = fallback;
                         }
@@ -564,7 +544,7 @@ export default function Services() {
                         {plant.title}
                       </span>
                       <span className="text-blue-200 text-[11px] drop-shadow-sm">
-                        Turnkey Engineered by National Engineering Works
+                        Plant and machinery overview
                       </span>
                     </div>
                   </div>
@@ -572,7 +552,7 @@ export default function Services() {
                   {/* Highlights Bar below Image */}
                   <div className="p-4 bg-slate-50 border-t border-slate-200 space-y-2">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
-                      ENGINEERING ADVANTAGES:
+                      PROJECT CONSIDERATIONS:
                     </span>
                     <ul className="space-y-1.5 text-xs text-slate-700">
                       {plant.highlights.map((hl, i) => (
@@ -589,7 +569,7 @@ export default function Services() {
                 <div className="lg:col-span-7 flex flex-col justify-between">
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">
-                      Plant Overview &amp; Operational Engineering
+                      Plant and machinery overview
                     </h3>
                     <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
                       {plant.fullDesc}
@@ -598,7 +578,7 @@ export default function Services() {
                     {/* Target Crops Badge Strip */}
                     <div className="mb-6 p-4 rounded-xl bg-blue-50/50 border border-blue-100">
                       <span className="text-xs font-bold uppercase tracking-wider text-blue-900 block mb-2">
-                        SUITABLE RAW CROPS PROCESSED:
+                        CROPS TO DISCUSS:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {plant.suitableCrops.map((crop, i) => (
@@ -615,7 +595,7 @@ export default function Services() {
                     {/* Integrated Machinery Grid */}
                     <div className="mb-8">
                       <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">
-                        KEY MACHINERY INTEGRATED INTO THIS PLANT:
+                        RELATED CATALOGUE MACHINERY:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {plant.keyMachinery.map((mach, i) => (
@@ -633,7 +613,7 @@ export default function Services() {
                   {/* Direct Action Link */}
                   <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
                     <span className="text-xs text-slate-500 font-medium">
-                      Custom capacity? We engineer from 10 TPD to 120+ TPD.
+                      Share your crop, throughput and site requirements.
                     </span>
                     <Link
                       to={`/quote?machine=${encodeURIComponent(plant.title)}`}
@@ -686,14 +666,15 @@ export default function Services() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold tracking-widest uppercase text-blue-600 block mb-2">
-              TURNKEY EXECUTION METHODOLOGY
+              PLANNING A PROCESSING LINE
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              From First CAD Drawing to Finished Bagging
+              Start with the crop and required process
             </h2>
             <p className="text-slate-600 text-sm mt-3 leading-relaxed">
-              Every facility we deliver is managed under a strict 5-stage turnkey
-              protocol ensuring on-time commissioning and guaranteed output specs.
+              The machine combination depends on the material, process stages,
+              target throughput and site layout. Share these details with us to
+              discuss suitable options.
             </p>
           </div>
 
@@ -759,9 +740,9 @@ export default function Services() {
               Planning to Build a Dal Mill, Rice Plant, or Cleaning Line?
             </h2>
             <p className="text-blue-100 text-base leading-relaxed mb-8 max-w-2xl mx-auto">
-              Speak directly with our senior plant engineering team in Solapur.
-              We provide custom 3D layouts, capacity feasibility studies, and
-              comprehensive turnkey equipment quotations.
+              Speak with National Engineering Works in Solapur, Maharashtra.
+              Share the crop, process stages and site details to discuss
+              machinery and plant options.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link

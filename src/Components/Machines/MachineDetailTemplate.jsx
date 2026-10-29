@@ -1,6 +1,6 @@
 // src/Components/Machines/MachineDetailTemplate.jsx
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -77,12 +77,6 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
                 {machine.category}
               </span>
-              <span className="font-mono text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
-                MODEL #{String(machine.id || 1).padStart(2, "0")}
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/70">
-                ✓ Continuous Duty Rated
-              </span>
             </div>
 
             {/* Main Headline */}
@@ -98,33 +92,33 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
             {/* In-depth Summary */}
             <div className="p-4 rounded-xl bg-blue-50/60 border border-blue-100/90 text-sm text-slate-700 leading-relaxed mb-8">
               {machine.summary ||
-                "Engineered with industrial-grade mild steel and stainless contact parts, providing precision grain grading, low vibration operation, and minimal power consumption."}
+                "Contact National Engineering Works for product-specific construction, sizing and configuration details."}
             </div>
 
             {/* Key Quick Metrics */}
             <div className="grid grid-cols-3 gap-4 mb-8">
               <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs">
                 <span className="block text-xl font-bold text-blue-700 font-mono">
-                  99.5%+
+                  {machine.category}
                 </span>
                 <span className="text-[11px] font-medium text-slate-500 uppercase tracking-wider block mt-0.5">
-                  Purity Output
+                  Equipment Category
                 </span>
               </div>
               <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs">
                 <span className="block text-xl font-bold text-blue-700 font-mono">
-                  Custom
+                  {machine.applications?.[0] || "Discuss application"}
                 </span>
                 <span className="text-[11px] font-medium text-slate-500 uppercase tracking-wider block mt-0.5">
-                  TPH Capacity
+                  Common Application
                 </span>
               </div>
               <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs">
                 <span className="block text-xl font-bold text-blue-700 font-mono">
-                  Low dB
+                  Enquiry
                 </span>
                 <span className="text-[11px] font-medium text-slate-500 uppercase tracking-wider block mt-0.5">
-                  Vibro-Balanced
+                  Confirm Product Fit
                 </span>
               </div>
             </div>
@@ -177,21 +171,21 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
                 />
               </div>
 
-              {/* Bottom Feature Pill Strip */}
+              {/* Product details should be confirmed for each configuration. */}
               <div className="w-full mt-4 pt-4 border-t border-blue-100/80 flex items-center justify-around text-center text-xs text-slate-600 relative z-10">
                 <div>
-                  <span className="block font-bold text-slate-900">Heavy Duty</span>
-                  <span className="text-[10px] text-slate-500">M.S. / SS304</span>
+                  <span className="block font-bold text-slate-900">Application</span>
+                  <span className="text-[10px] text-slate-500">Discuss fit</span>
                 </div>
                 <div className="w-px h-6 bg-blue-100" />
                 <div>
-                  <span className="block font-bold text-slate-900">Customized</span>
-                  <span className="text-[10px] text-slate-500">Screen Apertures</span>
+                  <span className="block font-bold text-slate-900">Configuration</span>
+                  <span className="text-[10px] text-slate-500">Discuss options</span>
                 </div>
                 <div className="w-px h-6 bg-blue-100" />
                 <div>
-                  <span className="block font-bold text-slate-900">1 Year</span>
-                  <span className="text-[10px] text-slate-500">Warranty Support</span>
+                  <span className="block font-bold text-slate-900">Specifications</span>
+                  <span className="text-[10px] text-slate-500">Confirm by enquiry</span>
                 </div>
               </div>
             </div>
@@ -239,7 +233,7 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
               </h2>
               <p className="text-slate-700 text-base leading-relaxed mb-6">
                 {machine.workingPrinciple ||
-                  "The equipment operates via controlled negative-pressure aspiration integrated with dynamic mechanical stratification, ensuring pure grain output with zero broken kernel waste."}
+                  `Contact National Engineering Works for the operating details and configuration of the ${machine.name}.`}
               </p>
 
               {/* Flow Steps */}
@@ -294,27 +288,13 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
             {/* Right Card: Quick Spec Highlight */}
             <div className="md:col-span-4 bg-gradient-to-br from-blue-900 to-slate-900 text-white p-7 rounded-2xl shadow-lg">
               <span className="text-xs font-mono font-semibold uppercase text-blue-400 block mb-1">
-                ENGINEERING STANDARDS
+                PRODUCT INFORMATION
               </span>
-              <h3 className="text-xl font-bold mb-4">Manufacturing Guarantee</h3>
-              <ul className="space-y-3 text-xs text-slate-300">
-                <li className="flex items-center gap-2">
-                  <span className="text-emerald-400 font-bold">✓</span>
-                  Heavy-gauge laser-cut steel framework
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-emerald-400 font-bold">✓</span>
-                  Dynamically balanced rotating parts
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-emerald-400 font-bold">✓</span>
-                  Dust-tight sealed bearing assemblies
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-emerald-400 font-bold">✓</span>
-                  Complete on-site operational testing
-                </li>
-              </ul>
+              <h3 className="text-xl font-bold mb-4">Need help choosing this machine?</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Share your crop, process stage and throughput requirement. The
+                Solapur team can discuss product details and suitability.
+              </p>
               <div className="mt-6 pt-5 border-t border-white/10">
                 <Link
                   to={`/quote?machine=${encodeURIComponent(machine.name)}`}
@@ -339,10 +319,10 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {(machine.features || [
-                "Heavy-duty eccentric drive with low vibration transmission",
-                "High-capacity aspiration connection for dust-free operation",
-                "Easy-access maintenance doors with quick-release latches",
-                "Wear-resistant replaceable contact plates for longevity",
+                `Ask about available configurations for the ${machine.name}.`,
+                "Confirm product suitability against your crop and process.",
+                "Request current technical specifications before purchase.",
+                "Discuss installation and support options for your project.",
               ]).map((feat, idx) => (
                 <div
                   key={idx}
@@ -356,8 +336,8 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
                       {feat}
                     </h4>
                     <p className="text-xs text-slate-600 mt-1">
-                      Engineered for continuous industrial duty with minimal
-                      maintenance downtime.
+              Ask us to confirm configuration for your product and operating
+              requirements.
                     </p>
                   </div>
                 </div>
@@ -376,34 +356,34 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
                 <tbody className="divide-y divide-slate-100 text-slate-700">
                   <tr>
                     <td className="py-3 px-4 font-semibold text-slate-900">
-                      Material of Construction
+                      Product category
                     </td>
                     <td className="py-3 px-4">
-                      Heavy-gauge Mild Steel structure with optional SS304 product contact
+                      {machine.category}
                     </td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 font-semibold text-slate-900">
-                      Drive Power
+                      Applications
                     </td>
                     <td className="py-3 px-4">
-                      High-efficiency standard 3-phase induction motor (TEFC)
+                      {(machine.applications || []).join(", ") || "Contact us for details"}
                     </td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 font-semibold text-slate-900">
-                      Processing Capacity
+                      Materials to discuss
                     </td>
                     <td className="py-3 px-4">
-                      Tailored from 1.0 TPH up to 15+ TPH per client requirement
+                      {(machine.materials || []).join(", ") || "Contact us to confirm suitability"}
                     </td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 font-semibold text-slate-900">
-                      Surface Finish
+                      Throughput and configuration
                     </td>
                     <td className="py-3 px-4">
-                      Two-coat anti-corrosive industrial epoxy primer & polyurethane topcoat
+                      Confirmed against the crop, process and site requirements during enquiry
                     </td>
                   </tr>
                 </tbody>
@@ -446,7 +426,7 @@ export default function MachineDetailTemplate({ slug: propSlug }) {
                     {mat}
                   </span>
                   <span className="text-[11px] text-blue-700 font-medium">
-                    Fully Compatible
+                    Discuss suitability
                   </span>
                 </div>
               ))}

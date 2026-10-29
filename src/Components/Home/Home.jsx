@@ -7,7 +7,7 @@ import {
   ProjectCTA,
   SectionHeading,
 } from "../UI";
-import { machines, services } from "../../Data/Machines";
+import { company, machines, services } from "../../Data/Machines";
 
 export default function Home() {
   // Featured machines for the homepage collection
@@ -30,7 +30,7 @@ export default function Home() {
         />
         <div className="hero-shade" />
         <div className="container hero-content">
-          <Eyebrow light>FOOD PROCESSING MACHINERY / EST. 2010</Eyebrow>
+          <Eyebrow light>FOOD PROCESSING MACHINERY</Eyebrow>
           <h1 id="hero-title">
             Engineering
             <br />
@@ -57,7 +57,7 @@ export default function Home() {
             MANUFACTURED IN SOLAPUR, INDIA
           </span>
           <span>
-            EST. 2010
+            SOLAPUR, MAHARASHTRA
             <span className="hero-bottom-line" />
             ENGINEERED TO ENDURE
           </span>
@@ -97,10 +97,9 @@ export default function Home() {
             <div className="intro-bottom">
               <p>
                 Behind every productive plant is a series of thoughtful
-                decisions. Since 2010, National Engineering Works has brought
-                practical engineering and manufacturing experience to food
-                processing machinery — helping turn requirements into working
-                solutions.
+                decisions. National Engineering Works makes grain and pulse
+                processing machinery in Solapur, Maharashtra, with equipment
+                and plant options shaped around each customer&apos;s requirements.
               </p>
               <Link className="text-link" to="/about">
                 Discover our story
@@ -244,6 +243,65 @@ export default function Home() {
           <ButtonLink to="/about" secondary>
             Inside National Engineering
           </ButtonLink>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="solapur-manufacturer-title">
+        <div className="container">
+          <div className="max-w-3xl">
+            <Eyebrow>BASED IN SOLAPUR, MAHARASHTRA</Eyebrow>
+            <h2 id="solapur-manufacturer-title">
+              Grain and pulse processing machinery, made in <em>Solapur.</em>
+            </h2>
+            <p>
+              National Engineering Works is a manufacturer of grain and pulse
+              processing machinery based at C-162, Chincholi MIDC, Solapur,
+              Maharashtra. Explore individual machines or discuss a processing
+              plant requirement with our team.
+            </p>
+            <address className="not-italic">
+              {company.address}
+            </address>
+            <div className="flex flex-wrap gap-4">
+              <a href={`tel:+91${company.phones[0]}`}>
+                Call +91 {company.phones[0]}
+              </a>
+              <a href={`mailto:${company.email}`}>{company.email}</a>
+              <a href={company.maps} target="_blank" rel="noreferrer">
+                Directions to our Solapur location <Arrow diagonal />
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 border-t border-slate-200 pt-8 md:grid-cols-2">
+            <div>
+              <h3>Where is National Engineering Works located?</h3>
+              <p>
+                We are at {company.address}. Contact the team for directions or
+                to discuss a visit.
+              </p>
+            </div>
+            <div>
+              <h3>What machinery does National Engineering Works make?</h3>
+              <p>
+                The catalogue includes equipment for grain cleaning and
+                separation, pulse and rice milling, material handling, dust
+                control, finishing and grading. See the machinery pages for
+                product details.
+              </p>
+            </div>
+            <div>
+              <h3>How can I request a machinery or plant quote?</h3>
+              <p>
+                Share the crop, process stages, site details and expected
+                throughput through our enquiry form. The team can discuss a
+                suitable machine or plant configuration with you.
+              </p>
+              <Link className="text-link" to="/quote">
+                Send an enquiry <Arrow diagonal />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

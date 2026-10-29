@@ -1,6 +1,5 @@
 // src/Components/Legal/TermsConditions.jsx
 "use client";
-import React from "react";
 import { Link } from "react-router-dom";
 import { company } from "../../Data/Machines";
 
@@ -259,3 +258,4 @@ export default function TermsConditions() {
     </div>
   );
 }
+

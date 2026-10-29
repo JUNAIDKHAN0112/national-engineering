@@ -1,6 +1,6 @@
 // src/Components/Gallery/Gallery.jsx
 "use client";
-import React, { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { company } from "../../Data/Machines";
@@ -9,180 +9,64 @@ import { Arrow } from "../UI";
 const plantInstallations = [
   {
     id: 1,
-    title: "Automated Multi-Tier Dal Mill Complex",
-    category: "Dal Milling",
-    capacity: "50 TPD Continuous Duty",
-    location: "Solapur, Maharashtra",
-    year: "Commissioned 2024",
+    title: "Processing plant view 01",
+    category: "Plant photos",
     img: "/Images/Plant-1.jpg",
-    desc: "Complete multi-deck pulse de-husking, splitting, polishing, and aspiration complex engineered for 24/7 industrial production with minimal kernel breakage.",
-    tags: ["50 TPD", "Multi-Tier Layout", "Zero-Dust Floor", "High Head Yield"],
-    equipment: [
-      "De-Stoners",
-      "Fatka Hullers",
-      "Rill Graders",
-      "Buff Polishers",
-      "Central Aspiration System",
-    ],
-  },
-  {
-    id: 2,
-    title: "High-Capacity Pulse De-Husking Facility",
-    category: "Dal Milling",
-    capacity: "75 TPD Throughput",
-    location: "Nagpur, Maharashtra",
-    year: "Commissioned 2023",
-    img: "/Images/Plant-2.jpg",
-    desc: "Integrated raw grain intake and multi-stage hulling line featuring heavy-gauge elevators, balance air boxes, and dust-tight enclosed gravity chutes.",
-    tags: ["75 TPD", "Fatka Battery", "Enclosed Chutes", "High Yield"],
-    equipment: [
-      "Battery of Fatka Machines",
-      "Bucket Elevators",
-      "Air Boxes",
-      "Cyclone Particulate Separators",
-    ],
+    desc: "A photograph of grain and pulse processing equipment in an industrial plant.",
   },
   {
     id: 3,
-    title: "Continuous Grain Cleaning & Separation Plant",
-    category: "Cleaning & Separation",
-    capacity: "40 TPD Line",
-    location: "Latur, Maharashtra",
-    year: "Commissioned 2024",
+    title: "Processing plant view 02",
+    category: "Plant photos",
     img: "/Images/Plant-3.jpg",
-    desc: "Precision gravity de-stoning and stratified vibration cleaning complex engineered to extract heavy stones, mud balls, and fine chaff in a single pass.",
-    tags: ["40 TPD", "99.8% Purity", "Vibro Decks", "Low Power Draw"],
-    equipment: [
-      "Advanced De-Stoners",
-      "Multi-Purpose Cleaners",
-      "Aspiration Chambers",
-      "Magnetic Separators",
-    ],
+    desc: "A photograph showing processing equipment and access platforms inside a plant.",
   },
   {
     id: 4,
-    title: "Industrial Milling & High-Finish Polishing Unit",
-    category: "Finishing & Grading",
-    capacity: "60 TPD Facility",
-    location: "Indore, Madhya Pradesh",
-    year: "Commissioned 2023",
+    title: "Processing plant view 03",
+    category: "Plant photos",
     img: "/Images/Plant-4.jpg",
-    desc: "High-finish dal and grain polishing line equipped with controlled water/oil tempering channels, buffing cylinders, and high-accuracy sizing screens.",
-    tags: ["60 TPD", "Super Polish", "Controlled Friction", "Grade-A Output"],
-    equipment: [
-      "Dal Polishers",
-      "Buff Polishers",
-      "Round Graders",
-      "Screw Conveyors",
-    ],
+    desc: "A photograph of processing equipment and the surrounding plant structure.",
   },
   {
     id: 5,
-    title: "Pneumatic Dust Control & Central Aspiration Line",
-    category: "Dust Management",
-    capacity: "35,000 CFM Airflow",
-    location: "Kalaburagi, Karnataka",
-    year: "Commissioned 2024",
+    title: "Processing plant view 04",
+    category: "Plant photos",
     img: "/Images/Plant-5.jpg",
-    desc: "Centralized industrial clean-air aspiration network utilizing high-pressure backward-curved blowers, rotary airlock seals, and high-efficiency cyclones.",
-    tags: ["35,000 CFM", "Clean Air ISO", "Explosion Proof", "Low Noise"],
-    equipment: [
-      "Centrifugal Blowers",
-      "Rotary Airlocks",
-      "High-Efficiency Cyclones",
-      "Plenum Ducting",
-    ],
+    desc: "A photograph of machinery, ducting, and access platforms in a processing plant.",
   },
   {
     id: 6,
-    title: "Heavy-Duty Material Handling & Elevators Grid",
-    category: "Material Handling",
-    capacity: "100 TPH Transfer Rate",
-    location: "Akola, Maharashtra",
-    year: "Commissioned 2023",
+    title: "Processing plant view 05",
+    category: "Plant photos",
     img: "/Images/Plant-6.jpg",
-    desc: "Inter-equipment grain transport infrastructure utilizing slow-speed anti-breakage bucket elevators, Z-elevators, and sealed tubular screw conveyors.",
-    tags: ["100 TPH", "Gentle Handling", "Sealed Bearings", "UHMW Lined"],
-    equipment: [
-      "Centrifugal Bucket Elevators",
-      "Z-Type Elevators",
-      "Tubular Screw Conveyors",
-      "Diverter Valves",
-    ],
+    desc: "A photograph of grain processing machinery and connected plant equipment.",
   },
   {
     id: 7,
-    title: "Commercial Turnkey Seed & Dal Grading Plant",
-    category: "Finishing & Grading",
-    capacity: "45 TPD Classification",
-    location: "Nanded, Maharashtra",
-    year: "Commissioned 2024",
+    title: "Processing plant view 06",
+    category: "Plant photos",
     img: "/Images/Plant-7.jpg",
-    desc: "Multi-compartment gyratory plansifter and gravity sorting table setup providing precision thickness, roundness, and density grading for export markets.",
-    tags: ["45 TPD", "Gyratory Plansifter", "Export Grade", "Precision Mesh"],
-    equipment: [
-      "Plan Swifters",
-      "Specific Gravity Tables",
-      "Drum Sieves",
-      "Multi-Discharge Hoppers",
-    ],
+    desc: "A photograph of a grain processing line inside an industrial facility.",
   },
   {
     id: 8,
-    title: "All-in-One Integrated Turnkey Dal Processing Plant",
-    category: "Turnkey Plant Lines",
-    capacity: "80 TPD Complete Plant",
-    location: "Chincholi MIDC, Solapur",
-    year: "Commissioned 2024",
-    img: "/Images/turnkey.jpg",
-    desc: "Full-scale turnkey processing facility spanning raw crop intake hoppers, automated cleaning, hulling, polishing, grading, and semi-automated packaging lines.",
-    tags: ["80 TPD", "Turnkey Solution", "PLC Ready", "Zero Spill Guarantee"],
-    equipment: [
-      "Raw Intake Pit",
-      "Multi-Purpose Cleaner",
-      "De-Stoners",
-      "Milling Battery",
-      "Polishing Units",
-      "Finished Dal Silos",
-    ],
-  },
-  {
-    id: 9,
-    title: "Paddy & Commercial Rice Milling Complex",
-    category: "Turnkey Plant Lines",
-    capacity: "50 TPD Processing",
-    location: "Raichur, Karnataka",
-    year: "Commissioned 2023",
+    title: "Processing plant view 07",
+    category: "Plant photos",
     img: "/Images/rice-mill.jpg",
-    desc: "Modern rice processing line engineered for paddy cleaning, de-stoning, silky water-mist polishing, and optical sorting prep with high head-rice yield.",
-    tags: ["50 TPD", "Silky Polish", "High Head Yield", "Pneumatic Gates"],
-    equipment: [
-      "Rice Silky Polishers",
-      "Thickness Graders",
-      "Pre-Cleaners",
-      "Pneumatic Elevators",
-      "Aspiration Hoods",
-    ],
+    desc: "A photograph showing grain processing machinery in an industrial plant.",
   },
 ];
 
-const galleryCategories = [
-  "All Installations",
-  "Dal Milling",
-  "Cleaning & Separation",
-  "Finishing & Grading",
-  "Material Handling",
-  "Dust Management",
-  "Turnkey Plant Lines",
-];
+const galleryCategories = ["All Photos", "Plant photos"];
 
 export default function Gallery() {
-  const [activeCategory, setActiveCategory] = useState("All Installations");
+  const [activeCategory, setActiveCategory] = useState("All Photos");
   const [activeLightboxIndex, setActiveLightboxIndex] = useState(null);
 
   // Filter plants based on active category
   const filteredPlants = useMemo(() => {
-    if (activeCategory === "All Installations") return plantInstallations;
+    if (activeCategory === "All Photos") return plantInstallations;
     return plantInstallations.filter(
       (p) => p.category.toLowerCase() === activeCategory.toLowerCase()
     );
@@ -262,7 +146,7 @@ export default function Gallery() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-blue-50 text-blue-700 border border-blue-200/90 shadow-xs mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-            TURNKEY INSTALLATIONS • PAN-INDIA COMMISSIONING
+            GRAIN & PULSE PROCESSING • SOLAPUR, MAHARASHTRA
           </motion.div>
 
           <motion.h1
@@ -271,10 +155,10 @@ export default function Gallery() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6"
           >
-            Architectural Plant &amp;
+            Plant &amp; Machinery
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600">
-              Installation Gallery.
+              Photo Gallery.
             </span>
           </motion.h1>
 
@@ -284,12 +168,12 @@ export default function Gallery() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10"
           >
-            A visual showcase of complete food processing plants engineered,
-            fabricated, and commissioned by National Engineering Works.
-            Delivering high-purity, continuous-duty production lines across India.
+            Browse photographs of grain processing equipment and plant
+            interiors. Ask National Engineering Works in Solapur about
+            machinery suited to your crop and process requirements.
           </motion.p>
 
-          {/* Quick Metrics Bar: Clean White Glass Cards with Royal Blue Accents */}
+          {/* Company and catalogue details */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -298,34 +182,34 @@ export default function Gallery() {
           >
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
               <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">
-                150+
+                Solapur
               </span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
-                Plants Commissioned
+                Maharashtra
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
               <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">
-                10 - 100
+                Dal
               </span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
-                TPD Capacity Range
+                Milling
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
               <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">
-                99.8%
+                Pulse
               </span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
-                Grain Purity Output
+                Processing
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
               <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">
-                100%
+                Machinery
               </span>
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
-                Custom CAD Layouts
+                Photo Gallery
               </span>
             </div>
           </motion.div>
@@ -339,7 +223,7 @@ export default function Gallery() {
             {galleryCategories.map((cat) => {
               const isSelected = activeCategory === cat;
               const count =
-                cat === "All Installations"
+                cat === "All Photos"
                   ? plantInstallations.length
                   : plantInstallations.filter(
                       (p) => p.category.toLowerCase() === cat.toLowerCase()
@@ -372,7 +256,7 @@ export default function Gallery() {
 
           <div className="text-xs font-semibold text-slate-500 shrink-0">
             Showing <strong className="text-slate-900">{filteredPlants.length}</strong>{" "}
-            verified plant facilities
+            plant photos
           </div>
         </div>
       </section>
@@ -394,15 +278,13 @@ export default function Gallery() {
                 transition={{ duration: 0.4 }}
                 className="group relative flex flex-col bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-blue-400 transition-all duration-300 overflow-hidden"
               >
-                {/* Dedicated Top Header: Category & Capacity */}
+                {/* Photo category */}
                 <div className="px-5 pt-3.5 pb-2.5 flex items-center justify-between border-b border-slate-100 bg-white relative z-10">
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-blue-50 text-blue-700 border border-blue-200/80">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
                     {plant.category}
                   </span>
-                  <span className="font-mono text-xs font-bold text-blue-800 bg-blue-50/60 px-2.5 py-0.5 rounded-md border border-blue-200/60">
-                    {plant.capacity}
-                  </span>
+                  <span className="text-xs font-medium text-slate-500">Plant photo</span>
                 </div>
 
                 {/* Image Stage with Interactive Hover Inspection */}
@@ -412,10 +294,10 @@ export default function Gallery() {
                 >
                   <img
                     src={plant.img}
-                    alt={plant.title}
+                    alt={`Grain and pulse processing plant photograph ${plant.id}`}
                     loading="lazy"
                     onError={(e) => {
-                      const fallback = "/Images/turnkey.jpg";
+                      const fallback = "/Images/Plant-1.jpg";
                       if (!e.currentTarget.src.endsWith(fallback)) {
                         e.currentTarget.src = fallback;
                       }
@@ -434,10 +316,10 @@ export default function Gallery() {
                     </span>
                   </div>
 
-                  {/* Location Pin Tag on Bottom-Left */}
+                  {/* Image label */}
                   <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-[11px] font-semibold text-white/95 bg-slate-900/80 px-2.5 py-1 rounded-lg backdrop-blur-md border border-white/10 shadow-sm pointer-events-none">
-                    <span className="text-blue-400">📍</span>
-                    <span>{plant.location}</span>
+                    <span className="text-blue-400">◉</span>
+                    <span>Processing plant</span>
                   </div>
                 </div>
 
@@ -459,36 +341,6 @@ export default function Gallery() {
                     {plant.desc}
                   </p>
 
-                  {/* Integrated Equipment Chips */}
-                  <div className="mt-4 pt-3 border-t border-slate-100">
-                    <span className="text-[10px] font-bold tracking-wider uppercase text-slate-400 block mb-1.5">
-                      KEY INTEGRATED EQUIPMENT:
-                    </span>
-                    <div className="flex flex-wrap gap-1">
-                      {plant.equipment.map((eq, i) => (
-                        <span
-                          key={i}
-                          className="inline-block px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700 border border-slate-200/70"
-                        >
-                          {eq}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Key Plant Spec Badges */}
-                  <div className="mt-3.5 flex flex-wrap gap-1.5">
-                    {plant.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-200/60"
-                      >
-                        <span className="w-1 h-1 rounded-full bg-blue-600" />
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
                   {/* Card Actions Footer */}
                   <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
                     <button
@@ -504,7 +356,7 @@ export default function Gallery() {
                       to={`/quote?machine=${encodeURIComponent(plant.title)}`}
                       className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-all duration-200 shadow-sm"
                     >
-                      Enquire for Setup
+                      Ask about plant options
                     </Link>
                   </div>
                 </div>
@@ -572,11 +424,11 @@ export default function Gallery() {
               <div className="relative md:flex-1 bg-slate-950 flex items-center justify-center p-4 min-h-[300px] md:min-h-[500px]">
                 <img
                   src={activePlant.img}
-                  alt={activePlant.title}
+                  alt={`Grain and pulse processing plant photograph ${activePlant.id}`}
                   className="max-h-[75vh] w-full object-contain rounded-xl"
                 />
                 <div className="absolute bottom-4 left-6 text-xs text-white/70 font-mono">
-                  Installation {activeLightboxIndex + 1} of{" "}
+                  Photo {activeLightboxIndex + 1} of{" "}
                   {filteredPlants.length}
                 </div>
               </div>
@@ -588,53 +440,29 @@ export default function Gallery() {
                     <span className="px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200">
                       {activePlant.category}
                     </span>
-                    <span className="font-mono text-xs font-semibold text-slate-500">
-                      {activePlant.year}
-                    </span>
+                    <span className="font-mono text-xs font-semibold text-slate-500">Plant photo</span>
                   </div>
 
                   <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mb-2">
                     {activePlant.title}
                   </h2>
 
-                  <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-4">
-                    <span className="text-blue-600">📍</span>
-                    <span>{activePlant.location}</span>
-                    <span>•</span>
-                    <span className="text-blue-700 font-bold">
-                      {activePlant.capacity}
-                    </span>
+                  <div className="text-xs font-semibold text-slate-500 mb-4">
+                    Grain and pulse processing equipment
                   </div>
 
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
                     {activePlant.desc}
                   </p>
 
-                  {/* Highlights Grid */}
-                  <div className="space-y-3 mb-6">
-                    <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                      Commissioned Machinery:
-                    </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {activePlant.equipment.map((eq, i) => (
-                        <span
-                          key={i}
-                          className="px-2.5 py-1 rounded-lg text-xs font-medium bg-white text-slate-700 border border-slate-200 shadow-xs"
-                        >
-                          ✓ {eq}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
                   <div className="p-3.5 rounded-xl bg-blue-50/70 border border-blue-200/80 text-xs text-blue-900 space-y-1">
                     <div className="font-bold flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-blue-600" />
-                      Engineering Standards Guaranteed
+                      Need product details?
                     </div>
                     <p className="text-slate-600">
-                      Includes 3D layout simulation, vibration balance testing,
-                      and full on-site trial runs.
+                      Contact the Solapur team with your crop and processing
+                      requirements to discuss relevant machinery.
                     </p>
                   </div>
                 </div>
@@ -646,7 +474,7 @@ export default function Gallery() {
                     onClick={closeLightbox}
                     className="w-full py-3 px-4 rounded-xl font-bold text-xs text-white bg-blue-600 hover:bg-blue-700 transition flex items-center justify-center gap-2 shadow-md"
                   >
-                    Request Proposal for Similar Setup
+                    Discuss your requirements
                     <Arrow diagonal className="w-3.5 h-3.5 text-white" />
                   </Link>
                 </div>
@@ -656,19 +484,20 @@ export default function Gallery() {
         )}
       </AnimatePresence>
 
-      {/* 5. LUXURY ENGINEERING STANDARDS SECTION */}
+      {/* 5. Helpful enquiry checklist */}
       <section className="py-20 bg-gradient-to-b from-white via-blue-50/30 to-slate-50 border-t border-b border-blue-100">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold tracking-widest uppercase text-blue-600 block mb-2">
-              TURNKEY EXECUTION METHODOLOGY
+              PLANNING A MACHINERY ENQUIRY
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Engineering Every Stage to Perfection
+              Details that help shape a useful enquiry
             </h2>
             <p className="text-slate-600 text-sm mt-3 leading-relaxed">
-              From raw footprint analysis and 3D flow planning to final electrical panel
-              integration, every plant we deliver is custom-engineered for maximum output.
+              Machinery selection depends on the crop, process stages, required
+              throughput and available site space. Include these details when
+              contacting us.
             </p>
           </div>
 
@@ -676,23 +505,23 @@ export default function Gallery() {
             {[
               {
                 num: "01",
-                title: "3D CAD Layout & Flow",
-                desc: "We simulate your material flow path, elevation drops, and operator catwalk clearances before cutting steel.",
+                title: "Crop or product",
+                desc: "Tell us whether you are processing pulses, rice, grains, seeds or another material.",
               },
               {
                 num: "02",
-                title: "Heavy-Gauge Fabrication",
-                desc: "All framework, hoppers, and ducting are CNC laser cut and welded from certified heavy-gauge mild steel and SS304.",
+                title: "Process stages",
+                desc: "List the steps you need, such as cleaning, milling, grading, conveying or dust collection.",
               },
               {
                 num: "03",
-                title: "Zero-Spill Dynamic Balancing",
-                desc: "Every rotating roll, beater, deck, and impeller is dynamically balanced to ensure quiet, vibration-free longevity.",
+                title: "Expected throughput",
+                desc: "Share your target output so the team can discuss suitable machine and plant options.",
               },
               {
                 num: "04",
-                title: "On-Site Commissioning",
-                desc: "Our plant engineers oversee on-site erection, pneumatic balancing, trial runs, and operator technical handover.",
+                title: "Site information",
+                desc: "Provide your location and available floor space or building layout, if known.",
               },
             ].map((step, idx) => (
               <div
@@ -723,21 +552,21 @@ export default function Gallery() {
 
           <div className="relative max-w-3xl mx-auto z-10">
             <span className="text-xs font-bold tracking-widest uppercase text-blue-200 block mb-3">
-              PLAN YOUR NEXT FACILITY
+              TALK TO OUR SOLAPUR TEAM
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-white">
-              Ready to Build or Modernize Your Processing Plant?
+              Looking for grain or pulse processing machinery?
             </h2>
             <p className="text-blue-100 text-base leading-relaxed mb-8 max-w-2xl mx-auto">
-              Discuss your target throughput, crop types, and site dimensions directly
-              with our senior plant engineering team in Solapur.
+              Share your crop, process stages, throughput and site details with
+              National Engineering Works in Solapur, Maharashtra.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 to="/quote"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-blue-900 bg-white hover:bg-blue-50 transition shadow-lg hover:shadow-xl"
               >
-                Schedule Plant Consultation
+                Send a project enquiry
                 <Arrow diagonal className="w-4 h-4 text-blue-900" />
               </Link>
               <a
