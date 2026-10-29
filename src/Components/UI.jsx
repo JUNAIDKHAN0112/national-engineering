@@ -183,11 +183,13 @@ export function ProductCard({ product, index = 0 }) {
       <div
         className="product-card-image"
         style={{
-          background: "#ffffff",
+          background: "linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           overflow: "hidden",
+          borderRadius: "16px",
+          position: "relative",
         }}
       >
         <img
@@ -220,6 +222,18 @@ export function ProductCard({ product, index = 0 }) {
         <span className="small-label">{category}</span>
         <h3>{product.name}</h3>
         <p>{product.desc || product.summary}</p>
+        {product.materials && product.materials.length > 0 && (
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {product.materials.slice(0, 3).map((mat, i) => (
+              <span
+                key={i}
+                className="inline-block text-[11px] px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-medium border border-slate-200/60"
+              >
+                {mat}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </Link>
   );

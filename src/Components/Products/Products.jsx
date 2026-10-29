@@ -1,790 +1,419 @@
-// const AdvancedMachinesPage = () => {
-//   return (
-//     <div>
-//       <section className=" bg-gradient-to-r from-zinc-400 to-zinc-200  w-full py-6 px-2">
-//         <div className="text-center">
-//           <h2 className="text-2xl text-left mx-5 py-2 md:text-4xl   border-b-2 border-green-600 mb-4">
-//             National Engineering Works
-//           </h2>
-//           <p className="mt-4 text-lg">
-//             We have invested in the most innovative and high-quality machinery
-//             to ensure top-notch results in food processing. Below are the
-//             machines that set us apart in the industry.
-//           </p>
-//         </div>
-//         <div className=" py-4 px-4 md:px-4">
-//       <div className="rounded-md  bg-zinc-200 max-w-6xl mx-auto">
-        
-
-//         {/* Machine Features */}
-//         <div className="grid grid-cols-1 md:grid-cols-2  gap-8 p-4 ">
-//           {/* Image */}
-//           <div className="flex justify-center">
-//             <img
-//               src="https://anval.net/wp-content/uploads/2020/01/RH-Series.png"
-//               alt="Advanced Machines"
-//               className=""
-//             />
-//           </div>
-//           {/* Text */}
-//           <div>
-//             <h3 className="text-2xl border-b border-black font-medium text-gray-900 mb-4">
-//               Why Choose Our Machines?
-//             </h3>
-//             <p className="text-gray-700 mb-4">
-//               Our advanced machines are designed with state-of-the-art technology to enhance efficiency, accuracy, and productivity across industries. Whether you’re involved in manufacturing, processing, or construction, our equipment delivers consistent, high-quality performance.
-//             </p>
-//             <ul className="list-disc list-inside text-gray-700 space-y-2">
-//               <li>
-//                 **Precision Engineering** – Designed to handle complex tasks with utmost accuracy.
-//               </li>
-//               <li>
-//                 **Durability** – Built with high-quality materials to withstand heavy usage.
-//               </li>
-//               <li>
-//                 **Energy Efficient** – Optimized for reduced energy consumption without compromising output.
-//               </li>
-//               <li>
-//                 **User-Friendly Interface** – Easy-to-operate controls for seamless operation.
-//               </li>
-//             </ul>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//         {/* Machine 1 - De-Stoner */}
-//         <div className="flex border-b p-2  border-black  flex-col md:flex-row items-center ">
-//           <div className="w-full flex justify-center md:w-1/3 p-4">
-//           <a href="/destoner" >
-//             <img
-//               src="https://satake-usa.com/wp-content/uploads/2021/04/Destoner-SGA-B.png"
-//               alt="De-Stoner"
-//               className="w-52  h-52 object-cover rounded-md"
-//             />
-//             </a>
-//           </div>
-//           <div className="w-full md:w-2/3 p-4">
-//             <h3 className="text-3xl border-b-2 border-green-700 ">De-Stoner</h3>
-//             <p className="mt-2 text-lg">
-//               The De-Stoner efficiently removes stones and other foreign
-//               materials from grains, ensuring product purity and improving the
-//               final output quality.
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* Machine 2 - Elevators */}
-//         <div className="flex  border-b p-2 border-black  flex-col md:flex-row items-center  ">
-//           <div className="w-full md:w-2/3 p-4">
-//             <h3 className="text-3xl border-b-2 border-green-700 ">Elevators</h3>
-//             <p className="mt-2 text-lg">
-//               Elevators are used for efficient vertical transportation of bulk
-//               materials in the processing plant. They ensure smooth handling and
-//               reliable operation.
-//             </p>
-//           </div>
-//           <div className="w-full flex justify-center md:w-1/3 p-4">
-//           <a href="/elevator" >
-//             <img
-//               src="https://5.imimg.com/data5/SELLER/Default/2022/8/JF/YF/WC/16395088/mild-steel-bucket-elevator.png"
-//               alt="Elevators"
-//               className="w-52  h-52 object-cover rounded-md"
-//             /></a>
-//           </div>
-//         </div>
-
-//         {/* Machine 3 - Horizontal Cyclone */}
-//         <div className="flex border-b p-2 border-black  flex-col md:flex-row items-center  ">
-//           <div className="w-full flex justify-center m-2 md:w-1/3 p-4">
-//         <a href="/Cyclone" >
-//             <img
-//               src="https://5.imimg.com/data5/SELLER/Default/2023/8/336868120/LF/CB/CT/3370644/horizontal-cyclone-400-2-500x500.png"
-//               alt="Horizontal Cyclone"
-//               className="w-52  h-52 object-cover rounded-md"
-//             />
-//           </a>
-//           </div>
-//           <div className="w-full md:w-2/3 p-4">
-//             <h3 className="text-3xl border-b-2 border-green-700 ">
-//               Horizontal Cyclone
-//             </h3>
-//             <p className="mt-2 text-lg">
-//               The Horizontal Cyclone is designed for high-efficiency dust
-//               collection, ensuring clean production environments and a safer
-//               workplace.
-//             </p>
-//           </div>
-//         </div>
-
-        
-
-//         {/* Machine 5 - Fatka Machine */}
-//         <div className="flex border-b p-2 border-black  flex-col md:flex-row items-center  ">
-//           <div className="w-full md:w-2/3 p-4">
-//             <h3 className="text-3xl border-b-2 border-green-700 ">
-//               Fatka Machine
-//             </h3>
-//             <p className="mt-2 text-lg">
-//               The Fatka Machine separates and cleans pulses and grains by
-//               removing impurities, providing high-quality output for further
-//               processing.
-//             </p>
-//           </div>
-//           <div className="w-full flex justify-center md:w-1/3 p-4">
-//           <a href="/fatka" >
-//             <img
-//               src="https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/Catalogue/plastic-film-jhatka-fatka-machine-3-hp-capacity-20-50-20230819060549.png"
-//               alt="Fatka Machine"
-//               className="w-52  h-52 object-cover rounded-md"
-//             /></a>
-//           </div>
-//         </div>
-
-//         {/* Machine 6 - Buff Polisher */}
-//         <div className="flex border-b p-2 border-black  flex-col md:flex-row items-center  ">
-//           <div className="w-full flex justify-center md:w-1/3 p-4">
-//           <a href="/buff" >
-//             <img
-//               src="https://5.imimg.com/data5/SELLER/Default/2023/8/336872681/DM/NV/KM/3370644/dal-polisher-1-500x500.png"
-//               alt="Buff Polisher"
-//               className="w-52  h-52 object-cover rounded-md"
-//             /></a>
-//           </div>
-//           <div className="w-full md:w-2/3 p-4">
-//             <h3 className="text-3xl border-b-2 border-green-700 ">
-//               Buff Polisher
-//             </h3>
-//             <p className="mt-2 text-lg">
-//               The Buff Polisher enhances the appearance and quality of grains by
-//               polishing them to a uniform shine, ensuring a premium finish for
-//               processed products.
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* Machine 7 - Dal Polisher */}
-//         <div className="flex border-b p-2 border-black  flex-col md:flex-row items-center  ">
-//           <div className="w-full md:w-2/3 p-4">
-//             <h3 className="text-3xl border-b-2 border-green-700 ">
-//               Dal Polisher
-//             </h3>
-//             <p className="mt-2 text-lg">
-//               The Dal Polisher machine is designed to enhance the quality of
-//               pulses by polishing them, improving the texture, and making them
-//               more marketable.
-//             </p>
-//           </div>
-//           <div className="w-full flex justify-center md:w-1/3 p-4">
-//           <a href="/dal" >
-//             <img
-//               src="https://hindustanagro.in/wp-content/themes/hindustan/assets/images/product/dal-polisher.webp"
-//               alt="Dal Polisher"
-//               className="w-52  h-52 object-cover rounded-md"
-//             /></a>
-//           </div>
-//         </div>
-
-//         {/* Machine 8 - Screw Conveyor */}
-//         <div className="flex border-b p-2 border-black  flex-col md:flex-row items-center  ">
-//           <div className="w-full flex justify-center md:w-1/3 p-4">
-//           <a href="/conveyor" >
-//             <img
-//               src="https://www.cimbria.com/content/dam/public/grain-and-protein/cimbria/conveying/screw-conveyors/screw-conveyor-cu.png"
-//               alt="Screw Conveyor"
-//               className="w-52  h-52 object-cover rounded-md"
-//             />
-//             </a>
-//           </div>
-//           <div className="w-full md:w-2/3 p-4">
-//             <h3 className="text-3xl border-b-2 border-green-700 ">
-//               Screw Conveyor
-//             </h3>
-//             <p className="mt-2 text-lg">
-//               The Screw Conveyor is used to transport bulk materials like grains
-//               and powders in a controlled and efficient manner, making it a
-//               vital part of the production line.
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* Machine 9 - Rill Machine */}
-//         <div className="flex border-b p-2 border-black  flex-col md:flex-row items-center  ">
-//           <div className="w-full md:w-2/3 p-4">
-//             <h3 className="text-3xl border-b-2 border-green-700 ">
-//               Rill Machine
-//             </h3>
-//             <p className="mt-2 text-lg">
-//               The Rill Machine is used for separating and grading grains based
-//               on size, ensuring uniformity and improving the overall quality of
-//               the product.
-//             </p>
-//           </div>
-//           <div className="w-full flex justify-center md:w-1/3 p-4">
-//           <a href="Rill" >
-//             <img
-//               src="https://static.wixstatic.com/media/5f1a7b_1bd890a7f6f04fcbb414e2cec26ede91~mv2.png/v1/crop/x_476,y_157,w_2024,h_1379/fill/w_620,h_412,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/01-01_edited.png"
-//               alt="Rill Machine"
-//               className="w-52  h-52 object-cover rounded-md"
-//             />
-//             </a>
-//           </div>
-//         </div>
-
-//         {/* Machine 10 - Rotary Airlock */}
-//         <div className="flex border-b p-2 border-black  flex-col md:flex-row items-center  ">
-//           <div className="w-full flex justify-center md:w-1/3 p-4">
-//           <a href="/rotary" >
-//             <img
-//               src="https://anval.net/wp-content/uploads/2020/01/RH-Series.png"
-//               alt="Rotary Airlock"
-//               className="w-52  h-52 object-cover rounded-md"
-//             />
-//             </a>
-//           </div>
-//           <div className="w-full md:w-2/3 p-4">
-//             <h3 className="text-3xl border-b-2 border-green-700 ">
-//               Rotary Airlock
-//             </h3>
-//             <p className="mt-2 text-lg">
-//               The Rotary Airlock is essential for controlling the flow of
-//               powders and granular materials while maintaining air pressure in
-//               the system, crucial for dust collection.
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* Machine 11 - Blower Machine */}
-//         <div className="flex p-2 flex-col md:flex-row items-center ">
-//           <div className="w-full md:w-2/3 p-4">
-//             <h3 className="text-3xl  border-b-2 border-green-700 ">
-//               Blower Machine
-//             </h3>
-//             <p className="mt-2 text-lg">
-//               The Blower Machine is used to move air or gases through ducts or
-//               pipes, essential in dust collection systems and material handling.
-//             </p>
-//           </div>
-//           <div className="w-full flex justify-center md:w-1/3 p-4">
-//           <a href="/blower" >
-//             <img
-//               src="https://5.imimg.com/data5/SELLER/Default/2023/12/373127974/WA/PI/GQ/27056827/mild-steel-industrial-air-blower-500x500.png"
-//               alt="Blower Machine"
-//               className="w-52  h-52 object-cover rounded-md"
-//             />
-//             </a>
-//           </div>
-//         </div>
-//  {/* Expert Team Section */}
-//  <div className="bg-zinc-200 py-8 px-6 rounded-lg">
-//           <div className="">
-//             {/* Text */}
-//             <div>
-//               <h3 className="text-2xl font-medium text-gray-900 mb-4 border-b border-red-600 ">
-//                 Meet Our Expert Team
-//               </h3>
-//               <p className="text-gray-700 mb-4">
-//                 Our team of seasoned professionals is at the heart of our success. With years of hands-on experience and deep technical expertise, our experts are equipped to provide unparalleled support and guidance.
-//               </p>
-//               <ul className="list-disc list-inside text-gray-700 space-y-2">
-//                 <li>
-//                   **Certified Engineers** – Specialists in machinery installation and maintenance.
-//                 </li>
-//                 <li>
-//                   **Innovative Thinkers** – Continuously pushing boundaries to improve processes.
-//                 </li>
-//                 <li>
-//                   **Customer-Focused** – Committed to understanding your unique needs and delivering tailored solutions.
-//                 </li>
-//                 <li>
-//                   **Problem Solvers** – Addressing challenges swiftly with effective strategies.
-//                 </li>
-//               </ul>
-//             </div>
-//             {/* Image */}
-          
-//           </div>
-//         </div>
-
-//         {/* Call to Action */}
-//         <div className="text-center mt-12">
-//           <h3 className="text-2xl font-medium text-gray-900 mb-4">
-//             Experience Excellence with Our Machines and Team
-//           </h3>
-//           <p className="text-gray-700 mb-6">
-//             Discover how our advanced machines and expert team can transform your operations. Contact us today for more details.
-//           </p>
-//           <a href="/quote">
-         
-//           <button className="bg-blue-600 text-white py-2 px-6 rounded-lg shadow hover:bg-blue-700 transition">
-//             Learn More
-//           </button>
-//          </a>
-//         </div>
-      
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default AdvancedMachinesPage;
-// "use client";
-// import { motion } from "framer-motion";
-
-// const machines = [
-//   {
-//     id: 1,
-//     name: "De-Stoner",
-//     desc: "The De-Stoner efficiently removes stones and other foreign materials from grains, ensuring product purity and improving final output quality.",
-//     img: "https://satake-usa.com/wp-content/uploads/2021/04/Destoner-SGA-B.png",
-//     link: "/destoner",
-//   },
-//   {
-//     id: 2,
-//     name: "Elevators",
-//     desc: "Used for vertical transportation of bulk materials in processing plants, ensuring smooth handling and reliable operation.",
-//     img: "https://5.imimg.com/data5/SELLER/Default/2022/8/JF/YF/WC/16395088/mild-steel-bucket-elevator.png",
-//     link: "/elevator",
-//   },
-//   {
-//     id: 3,
-//     name: "Horizontal Cyclone",
-//     desc: "High-efficiency dust collection ensuring clean production environments and safer workplaces.",
-//     img: "https://5.imimg.com/data5/SELLER/Default/2023/8/336868120/LF/CB/CT/3370644/horizontal-cyclone-400-2-500x500.png",
-//     link: "/Cyclone",
-//   },
-//   {
-//     id: 4,
-//     name: "Fatka Machine",
-//     desc: "Separates and cleans pulses and grains by removing impurities, providing high-quality output for further processing.",
-//     img: "https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/Catalogue/plastic-film-jhatka-fatka-machine-3-hp-capacity-20-50-20230819060549.png",
-//     link: "/fatka",
-//   },
-//   {
-//     id: 5,
-//     name: "Buff Polisher",
-//     desc: "Enhances grain appearance by polishing them to a uniform shine, ensuring premium finish for processed products.",
-//     img: "https://5.imimg.com/data5/SELLER/Default/2023/8/336872681/DM/NV/KM/3370644/dal-polisher-1-500x500.png",
-//     link: "/buff",
-//   },
-//   {
-//     id: 6,
-//     name: "Dal Polisher",
-//     desc: "Improves texture and marketability of pulses by polishing and refining them with precision.",
-//     img: "https://hindustanagro.in/wp-content/themes/hindustan/assets/images/product/dal-polisher.webp",
-//     link: "/dal",
-//   },
-//   {
-//     id: 7,
-//     name: "Screw Conveyor",
-//     desc: "Transports bulk materials like grains and powders efficiently, making it a vital part of the production line.",
-//     img: "https://www.cimbria.com/content/dam/public/grain-and-protein/cimbria/conveying/screw-conveyors/screw-conveyor-cu.png",
-//     link: "/conveyor",
-//   },
-//   {
-//     id: 8,
-//     name: "Rill Machine",
-//     desc: "Separates and grades grains by size, ensuring uniformity and improving overall product quality.",
-//     img: "https://static.wixstatic.com/media/5f1a7b_1bd890a7f6f04fcbb414e2cec26ede91~mv2.png/v1/crop/x_476,y_157,w_2024,h_1379/fill/w_620,h_412,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/01-01_edited.png",
-//     link: "/Rill",
-//   },
-//   {
-//     id: 9,
-//     name: "Rotary Airlock",
-//     desc: "Controls flow of powders and granules while maintaining air pressure — crucial for dust collection systems.",
-//     img: "https://anval.net/wp-content/uploads/2020/01/RH-Series.png",
-//     link: "/rotary",
-//   },
-//   {
-//     id: 10,
-//     name: "Blower Machine",
-//     desc: "Moves air or gases through ducts or pipes — essential in dust collection and material handling systems.",
-//     img: "https://5.imimg.com/data5/SELLER/Default/2023/12/373127974/WA/PI/GQ/27056827/mild-steel-industrial-air-blower-500x500.png",
-//     link: "/blower",
-//   },
-// ];
-
-// const AdvancedMachinesPage = () => {
-//   return (
-//     <section className="bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100 py-12 px-6 md:px-12">
-//       <motion.div
-//         initial={{ opacity: 0, y: 40 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.7 }}
-//         className="max-w-6xl mx-auto"
-//       >
-//         {/* Heading */}
-//         <div className="text-center mb-12">
-//           <h2 className="text-4xl font-bold text-gray-900 border-b-4 border-green-600 inline-block pb-2">
-//             National Engineering Works
-//           </h2>
-//           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-//             We invest in state-of-the-art food processing machinery that
-//             combines innovation, durability, and precision to deliver superior
-//             performance across industries.
-//           </p>
-//         </div>
-
-//         {/* Intro Card */}
-//         <div className="rounded-2xl bg-white/70 shadow-md backdrop-blur-sm p-8 mb-16">
-//           <div className="grid md:grid-cols-2 gap-10 items-center">
-//             <motion.img
-//               whileHover={{ scale: 1.05 }}
-//               src="https://anval.net/wp-content/uploads/2020/01/RH-Series.png"
-//               alt="Advanced Machines"
-//               className="rounded-lg shadow-lg"
-//             />
-//             <div>
-//               <h3 className="text-2xl font-semibold text-gray-900 mb-4 border-b border-green-700 pb-2">
-//                 Why Choose Our Machines?
-//               </h3>
-//               <ul className="list-disc list-inside text-gray-700 space-y-2">
-//                 <li>
-//                   <strong>Precision Engineering:</strong> Built for complex
-//                   industrial tasks with accuracy.
-//                 </li>
-//                 <li>
-//                   <strong>Durability:</strong> High-quality materials withstand
-//                   heavy-duty usage.
-//                 </li>
-//                 <li>
-//                   <strong>Energy Efficiency:</strong> Lower energy usage without
-//                   performance loss.
-//                 </li>
-//                 <li>
-//                   <strong>User-Friendly Design:</strong> Easy controls and
-//                   intuitive operation.
-//                 </li>
-//               </ul>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Machines List */}
-//         <div className="space-y-12">
-//           {machines.map((m, i) => (
-//             <motion.div
-//               key={m.id}
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               viewport={{ once: true }}
-//               transition={{ duration: 0.6, delay: i * 0.05 }}
-//               className={`flex flex-col md:flex-row items-center gap-8 border-b border-gray-300 pb-8 ${
-//                 i % 2 === 1 ? "md:flex-row-reverse" : ""
-//               }`}
-//             >
-//               <a href={m.link} className="w-full md:w-1/3 flex justify-center">
-//                 <motion.img
-//                   whileHover={{ scale: 1.05 }}
-//                   src={m.img}
-//                   alt={m.name}
-//                   className="w-60 h-60 object-cover rounded-xl shadow-md"
-//                 />
-//               </a>
-//               <div className="w-full md:w-2/3">
-//                 <h3 className="text-2xl font-semibold text-gray-900 border-b-2 border-green-700 inline-block mb-3">
-//                   {m.name}
-//                 </h3>
-//                 <p className="text-gray-700 text-lg leading-relaxed">
-//                   {m.desc}
-//                 </p>
-//               </div>
-//             </motion.div>
-//           ))}
-//         </div>
-
-//         {/* Team Section */}
-//         <motion.div
-//           initial={{ opacity: 0 }}
-//           whileInView={{ opacity: 1 }}
-//           transition={{ duration: 0.8 }}
-//           className="bg-white/70 mt-16 p-8 rounded-2xl shadow-md"
-//         >
-//           <h3 className="text-3xl font-bold text-gray-900 border-b-2 border-green-700 pb-2 mb-4">
-//             Meet Our Expert Team
-//           </h3>
-//           <p className="text-gray-700 mb-4">
-//             Our team of certified engineers and technicians ensures seamless
-//             operation and continuous innovation across every project.
-//           </p>
-//           <ul className="list-disc list-inside text-gray-700 space-y-2">
-//             <li>Certified Engineers specializing in precision machinery.</li>
-//             <li>Innovative thinkers improving industrial efficiency.</li>
-//             <li>Customer-first approach for tailored solutions.</li>
-//             <li>Rapid problem-solving with proven strategies.</li>
-//           </ul>
-//         </motion.div>
-
-//         {/* CTA Section */}
-//         <motion.div
-//           initial={{ opacity: 0, scale: 0.95 }}
-//           whileInView={{ opacity: 1, scale: 1 }}
-//           transition={{ duration: 0.7 }}
-//           className="text-center mt-16"
-//         >
-//           <h3 className="text-3xl font-bold text-gray-900 mb-4">
-//             Experience Excellence with Our Machines
-//           </h3>
-//           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-//             Discover how our technology and expertise can redefine your
-//             operations. Contact us to learn more.
-//           </p>
-//           <a href="/quote">
-//             <button className="bg-green-600 hover:bg-green-700 text-white py-3 px-8 rounded-full shadow-lg transition-all duration-300">
-//               Learn More
-//             </button>
-//           </a>
-//         </motion.div>
-//       </motion.div>
-//     </section>
-//   );
-// };
-
-// export default AdvancedMachinesPage;
+// src/Components/Products/Products.jsx
 "use client";
-import { motion } from "framer-motion";
+import React, { useState, useMemo, useRef } from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { machines, categories, company } from "../../Data/Machines";
+import MachineCard from "../MachineCard";
+import { Arrow, Eyebrow } from "../UI";
 
 export default function AdvancedMachinesPage() {
-  // const machines = [
-  //   {
-  //     id: 1,
-  //     name: "De-Stoner",
-  //     desc: "Removes impurities like stones with precision airflow separation.",
-  //     img: "https://satake-usa.com/wp-content/uploads/2021/04/Destoner-SGA-B.png",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Fatka Machine",
-  //     desc: "Cleans and separates pulses efficiently for perfect grain quality.",
-  //     img: "https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/Catalogue/plastic-film-jhatka-fatka-machine-3-hp-capacity-20-50-20230819060549.png",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Buff Polisher",
-  //     desc: "Gives grains a uniform, market-ready shine with minimal power use.",
-  //     img: "https://5.imimg.com/data5/SELLER/Default/2023/8/336872681/DM/NV/KM/3370644/dal-polisher-1-500x500.png",
-  //   },
-  // ];
-const machines = [
-  {
-    id: 1,
-    name: "De-Stoner",
-    desc: "The De-Stoner efficiently removes stones and other foreign materials from grains, ensuring product purity and improving final output quality.",
-    img: "/Images/destoner.jpg",
-    link: "/destoner",
-  },
-  {
-    id: 2,
-    name: "Elevators",
-    desc: "Used for vertical transportation of bulk materials in processing plants, ensuring smooth handling and reliable operation.",
-    img: "/Images/bucket-elevator.png",
-    link: "/elevator",
-  },
-  {
-    id: 3,
-    name: "Horizontal Cyclone",
-    desc: "High-efficiency dust collection ensuring clean production environments and safer workplaces.",
-    img: "/Images/horizontal-cyclone.png",
-    link: "/Cyclone",
-  },
-  {
-    id: 4,
-    name: "Fatka Machine",
-    desc: "Separates and cleans pulses and grains by removing impurities, providing high-quality output for further processing.",
-    img: "/Images/Fatka.jpg",
-    link: "/fatka",
-  },
-  {
-    id: 5,
-    name: "Buff Polisher",
-    desc: "Enhances grain appearance by polishing them to a uniform shine, ensuring premium finish for processed products.",
-    img: "/Images/Buff.jpg",
-    link: "/buff",
-  },
-  {
-    id: 6,
-    name: "Dal Polisher",
-    desc: "Improves texture and marketability of pulses by polishing and refining them with precision.",
-    img: "/Images/Dal.jpg",
-    link: "/dal",
-  },
-  {
-    id: 7,
-    name: "Screw Conveyor",
-    desc: "Transports bulk materials like grains and powders efficiently, making it a vital part of the production line.",
-    img: "/Images/screw-Conveyor.jpg",
-    link: "/conveyor",
-  },
-  {
-    id: 8,
-    name: "Rill Machine",
-          desc: "Separates and grades grains by size, ensuring uniformity and improving overall product quality.",
-          img: "/Images/rill-machine.png",
-    link: "/Rill",
-  },
-  {
-    id: 9,
-    name: "Rotary Airlock",
-    desc: "Controls flow of powders and granules while maintaining air pressure — crucial for dust collection systems.",
-    img: "/Images/Rotary.jpg",
-    link: "/rotary",
-  },
-  {
-    id: 10,
-    name: "Blower Machine",
-    desc: "Moves air or gases through ducts or pipes — essential in dust collection and material handling systems.",
-    img: "/Images/Blower.jpg",
-    link: "/blower",
-  },
-  {
-    id: 11,
-    name: "Multi-Purpose Cleaner",
-    desc: "Combines high-volume aspiration with multi-deck vibrating sieves for grain pre-cleaning and fine separation.",
-    img: "/Images/multi-purpose-cleaner.jpg",
-    link: "/Cleaning-separating",
-  },
-  {
-    id: 12,
-    name: "Round Separator",
-    desc: "Circular vibro sifter and grader for precision multi-fraction particle classification and dedusting.",
-    img: "/Images/round-separator.jpg",
-    link: "/Cleaning-separating",
-  },
-  {
-    id: 13,
-    name: "Rice Silky Polisher",
-    desc: "Water-mist atomized friction polisher creating an export-grade silky shine and clean kernel finish.",
-    img: "/Images/rice-silky.jpg",
-    link: "/Milling",
-  },
-  {
-    id: 14,
-    name: "Mixer Machine",
-    desc: "Heavy-duty horizontal ribbon blender for uniform batch mixing of grains, pulses, flours, and seasonings.",
-    img: "/Images/mixer-machine.jpg",
-    link: "/Milling",
-  },
-  {
-    id: 15,
-    name: "Plan Swifter",
-    desc: "Multi-deck gyratory sifting machine delivering high-capacity size separation and grading across milling lines.",
-    img: "/Images/plan-swifter.jpg",
-    link: "/Finishing",
-  },
-];
+  const [activeCategory, setActiveCategory] = useState("All machinery");
+  const [searchQuery, setSearchQuery] = useState("");
+  const scrollContainerRef = useRef(null);
+
+  // Filter machines based on category and search query
+  const filteredMachines = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    return machines.filter((m) => {
+      const matchesCategory =
+        activeCategory === "All machinery" ||
+        m.category.toLowerCase() === activeCategory.toLowerCase();
+
+      if (!matchesCategory) return false;
+      if (!q) return true;
+
+      const searchable = [
+        m.name,
+        m.category,
+        m.desc || "",
+        m.summary || "",
+        ...(m.materials || []),
+        ...(m.applications || []),
+        ...(m.features || []),
+      ]
+        .join(" ")
+        .toLowerCase();
+
+      return searchable.includes(q);
+    });
+  }, [activeCategory, searchQuery]);
+
+  // Featured flagship machines for the quick horizontal showcase
+  const flagshipMachines = useMemo(() => {
+    const ids = [1, 24, 25, 7, 26, 27, 28, 12, 16, 23];
+    return ids.map((id) => machines.find((m) => m.id === id)).filter(Boolean);
+  }, []);
+
+  const scrollShowcase = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = direction === "left" ? -360 : 360;
+      scrollContainerRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  // Compute category count
+  const getCategoryCount = (cat) => {
+    if (cat === "All machinery") return machines.length;
+    return machines.filter(
+      (m) => m.category.toLowerCase() === cat.toLowerCase()
+    ).length;
+  };
+
   return (
-    <div className="text-zinc-800 overflow-hidden">
-      {/* HERO SECTION */}
-      <section className="h-full p-4 flex flex-col items-center justify-center text-center px-6">
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl border-b-2 border-green-700 p-2 mb-6 text-transparent bg-clip-text bg-gradient-to-r from-zinc-800 to-zinc-700"
-        >
-          Engineering The Future Of Machinery
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="text-lg text-gray-700 max-w-2xl"
-        >
-          Combining innovation, design, and performance to deliver next-generation industrial solutions.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className=""
-        >
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.2 }}
-          transition={{ delay: 1, duration: 2 }}
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599577180879-5b2e2d292b0a')] bg-cover bg-center blur-sm"
-        ></motion.div>
+    <div className="min-h-screen bg-slate-50/60 text-slate-800">
+      {/* 1. HERO SECTION */}
+      <section className="relative overflow-hidden bg-slate-900 text-white pt-24 pb-20 px-6 md:px-12 border-b border-slate-800">
+        {/* Subtle grid pattern background */}
+        <div
+          className="absolute inset-0 opacity-[0.07] pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(#fff 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+        {/* Subtle radial glow */}
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative max-w-6xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase bg-white/10 text-emerald-400 border border-white/10 backdrop-blur-md mb-6"
+          >
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            ENGINEERED IN SOLAPUR, MAHARASHTRA • EST. 2010
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6"
+          >
+            Precision Machinery for
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
+              Grain & Pulse Processing.
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10"
+          >
+            Explore our complete industrial portfolio of cleaning, de-stoning,
+            hulling, polishing, grading, and turnkey milling machinery. Built to
+            endure continuous multi-shift production.
+          </motion.p>
+
+          {/* Quick Metrics Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-slate-800/80"
+          >
+            <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <span className="block text-3xl font-extrabold text-white">
+                {machines.length}+
+              </span>
+              <span className="text-xs uppercase tracking-wider text-slate-400 mt-1 block">
+                Industrial Machines
+              </span>
+            </div>
+            <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <span className="block text-3xl font-extrabold text-white">06</span>
+              <span className="text-xs uppercase tracking-wider text-slate-400 mt-1 block">
+                Process Categories
+              </span>
+            </div>
+            <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <span className="block text-3xl font-extrabold text-white">100%</span>
+              <span className="text-xs uppercase tracking-wider text-slate-400 mt-1 block">
+                Custom Layouts
+              </span>
+            </div>
+            <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <span className="block text-3xl font-extrabold text-white">24/7</span>
+              <span className="text-xs uppercase tracking-wider text-slate-400 mt-1 block">
+                Support & Spares
+              </span>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
-      {/* HORIZONTAL MACHINE SCROLL */}
-      <section className="py-10 relative">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl text-center mb-12"
-        >
-          Our Cutting-Edge Machines
-        </motion.h2>
-
-        <div className="overflow-x-auto scrollbar-hide">
-          <div className="flex space-x-4 px-8">
-            {machines.map((m, i) => (
-              <a key={m.id} href={m.link}>
-              <motion.div
-                key={m.id}
-                className="min-w-[300px] bg-white p-6 rounded-2xl shadow-md backdrop-blur-md  transition"
+      {/* 2. FLAGSHIP SHOWCASE STRIP */}
+      <section className="py-12 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-6">
+            <div>
+              <span className="text-xs font-bold tracking-widest uppercase text-emerald-600 block mb-1">
+                FEATURED HIGHLIGHTS
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+                Flagship Processing Equipment
+              </h2>
+            </div>
+            {/* Scroll navigation arrows */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => scrollShowcase("left")}
+                aria-label="Scroll left"
+                className="w-10 h-10 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition shadow-xs"
               >
-                <img
-                  src={m.img}
-                  alt={m.name}
-                  className="w-full h-56 object-contain rounded-lg hover:scale-105 transition mb-4"
-                />
-                <h3 className="text-xl font-semibold text-zinc-900 mb-2 border-b-2 border-green-700 inline-block ">
-                  {m.name}
-                </h3>
-                <p className="text-gray-700 text-sm">{m.desc}</p>
-              </motion.div>
-              </a>
+                ←
+              </button>
+              <button
+                onClick={() => scrollShowcase("right")}
+                aria-label="Scroll right"
+                className="w-10 h-10 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition shadow-xs"
+              >
+                →
+              </button>
+            </div>
+          </div>
+
+          {/* Horizontal scroll container */}
+          <div
+            ref={scrollContainerRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x"
+          >
+            {flagshipMachines.map((m) => (
+              <div
+                key={m.id}
+                className="min-w-[280px] sm:min-w-[320px] md:min-w-[340px] snap-start"
+              >
+                <MachineCard {...m} />
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* PROCESS TIMELINE */}
-      <section className="py-4 px-8 text-center">
-        <h2 className="text-4xl  text-zinc-800 bg-clip-text mb-12">
-          Our Precision Process
-        </h2>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-4 gap-8">
-          {["Design", "Prototype", "Test", "Deliver"].map((step, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.2 }}
-              className="bg-gray-200/50 p-6 rounded-xl shadow-md transition"
+      {/* 3. MAIN CATALOGUE & INTERACTIVE FILTER SECTION */}
+      <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto" id="catalogue">
+        {/* Controls Container */}
+        <div className="mb-12">
+          {/* Header & Search Bar */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+            <div>
+              <span className="text-xs font-bold tracking-widest uppercase text-emerald-600 block mb-1">
+                COMPLETE PORTFOLIO
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                All Machinery
+              </h2>
+            </div>
+
+            {/* Real-time Search Box */}
+            <div className="relative w-full md:w-80">
+              <input
+                type="text"
+                placeholder="Search by name, crop or spec..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 shadow-xs transition"
+              />
+              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm">
+                🔍
+              </span>
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-400 hover:text-slate-600 px-1"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Category Filter Pills */}
+          <div className="flex flex-wrap gap-2.5">
+            {categories.map((cat) => {
+              const isSelected = activeCategory === cat;
+              const count = getCategoryCount(cat);
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium transition-all duration-200 shadow-xs ${
+                    isSelected
+                      ? "bg-slate-900 text-white shadow-md shadow-slate-900/10"
+                      : "bg-white text-slate-700 hover:bg-slate-100/80 border border-slate-200/80"
+                  }`}
+                >
+                  <span>{cat}</span>
+                  <span
+                    className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
+                      isSelected
+                        ? "bg-white/20 text-white"
+                        : "bg-slate-100 text-slate-500"
+                    }`}
+                  >
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Results feedback */}
+          <div className="flex items-center justify-between text-xs text-slate-500 mt-4 px-1">
+            <span>
+              Showing{" "}
+              <strong className="text-slate-800">{filteredMachines.length}</strong>{" "}
+              {filteredMachines.length === 1 ? "machine" : "machines"}
+              {activeCategory !== "All machinery" && ` in ${activeCategory}`}
+              {searchQuery && ` matching "${searchQuery}"`}
+            </span>
+            {(activeCategory !== "All machinery" || searchQuery) && (
+              <button
+                onClick={() => {
+                  setActiveCategory("All machinery");
+                  setSearchQuery("");
+                }}
+                className="text-emerald-700 font-semibold hover:underline"
+              >
+                Reset all filters
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* 4. MACHINERY CARDS GRID */}
+        {filteredMachines.length > 0 ? (
+          <motion.div
+            layout
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <AnimatePresence>
+              {filteredMachines.map((machine) => (
+                <MachineCard key={machine.id} {...machine} />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        ) : (
+          /* Empty search state */
+          <div className="text-center py-20 bg-white rounded-3xl border border-slate-200/80 p-8">
+            <span className="text-5xl block mb-4">⚙️</span>
+            <h3 className="text-xl font-bold text-slate-800 mb-2">
+              No matching machinery found
+            </h3>
+            <p className="text-sm text-slate-600 max-w-md mx-auto mb-6">
+              We couldn’t find any machines matching &quot;{searchQuery}&quot; in{" "}
+              {activeCategory}. Try adjusting your search keywords or clear the
+              filters.
+            </p>
+            <button
+              onClick={() => {
+                setActiveCategory("All machinery");
+                setSearchQuery("");
+              }}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-900 text-white hover:bg-slate-800 transition"
             >
-              <div className="text-5xl font-extrabold text-cyan-500 mb-4">
-                {i + 1}
+              Reset Filters
+            </button>
+          </div>
+        )}
+      </section>
+
+      {/* 5. PRECISION MANUFACTURING STANDARDS */}
+      <section className="py-20 bg-slate-900 text-white border-t border-slate-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs font-bold tracking-widest uppercase text-emerald-400 block mb-2">
+              MANUFACTURING EXCELLENCE
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              Built for Heavy Industrial Duty
+            </h2>
+            <p className="text-slate-400 text-sm mt-3 leading-relaxed">
+              Every machine is built in our Solapur facility using high-grade
+              materials, precision CNC machining, and balanced dynamic drives.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              {
+                num: "01",
+                title: "Process & Flow Planning",
+                desc: "We analyze your raw material intake, throughput targets, and facility heights to engineer custom equipment arrangements.",
+              },
+              {
+                num: "02",
+                title: "Laser & Steel Fabrication",
+                desc: "Heavy-gauge mild steel and SS304 fabrication ensuring structural rigidity under continuous abrasive loads.",
+              },
+              {
+                num: "03",
+                title: "Dynamic Balancing",
+                desc: "Every rotating roll, beater, deck, and impeller undergoes precision balancing to minimize vibration and bearing wear.",
+              },
+              {
+                num: "04",
+                title: "Turnkey Commissioning",
+                desc: "On-site installation support, electrical panel integration, and full operational handover for immediate production.",
+              },
+            ].map((step, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 transition-all duration-300"
+              >
+                <div className="text-2xl font-mono font-bold text-emerald-400 mb-3">
+                  {step.num}
+                </div>
+                <h4 className="text-base font-semibold text-white mb-2">
+                  {step.title}
+                </h4>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
-              <h4 className="text-xl font-semibold mb-2">{step}</h4>
-              <p className="text-gray-700 text-sm">
-                Step {i + 1} in our process to ensure every product meets
-                engineering perfection.
-              </p>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="py-24 text-center bg-zinc-200/80">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-6"
-        >
-          Build With Precision. Build With Us.
-        </motion.h2>
-        <p className="max-w-2xl mx-auto text-zinc-900/90 mb-8">
-          Partner with our engineers to design solutions that define the next
-          generation of industrial efficiency.
-        </p>
-        <button className="bg-white text-zinc-9 00 font-semibold py-3 px-10 rounded-full hover:bg-gray-100 transition">
-          Get In Touch
-        </button>
+      {/* 6. PROJECT ENQUIRY CTA */}
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-950 text-white text-center px-6">
+        <div className="max-w-3xl mx-auto">
+          <span className="text-xs font-bold tracking-widest uppercase text-emerald-400 block mb-3">
+            START YOUR PROJECT
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+            Need Custom Machinery or a Complete Plant?
+          </h2>
+          <p className="text-slate-300 text-base leading-relaxed mb-8">
+            Speak directly with our technical team in Solapur. We provide
+            machinery layouts, quotations, and process advice tailored to your
+            production capacity.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link
+              to="/quote"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-slate-900 bg-white hover:bg-slate-100 transition shadow-lg"
+            >
+              Request a Quotation
+              <Arrow diagonal className="w-4 h-4" />
+            </Link>
+            <a
+              href={`tel:${company.phones[0]}`}
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-white/10 hover:bg-white/15 border border-white/15 backdrop-blur-sm transition"
+            >
+              Call +91 {company.phones[0]}
+            </a>
+          </div>
+        </div>
       </section>
     </div>
   );
