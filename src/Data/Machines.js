@@ -543,27 +543,6 @@ export const machines = [
       'Internal screen cleaner pads ensuring continuous open apertures under high throughput',
     ],
   },
-
-  // Turnkey
-  {
-    id: 23,
-    slug: 'turnkey',
-    link: '/turnkey',
-    name: 'Complete Plant Solution',
-    desc: 'All-in-one integrated setup for pulse and grain processing industries.',
-    img: '/Images/turnkey.jpg',
-    category: 'Turnkey Solutions',
-    summary: 'Complete engineering, manufacturing, layout design, and commissioning for modern industrial dal mills and grain processing facilities.',
-    workingPrinciple: 'An end-to-end continuous automated production system integrating raw intake, cleaning, de-stoning, de-husking, splitting, polishing, grading, and packaging.',
-    applications: ['Commercial dal processing mills', 'Grain handling and cleaning terminals', 'Flour and besan plant installations', 'Seed processing facilities'],
-    materials: ['Toor dal', 'Chana dal', 'Urad dal', 'Moong dal', 'Paddy', 'Wheat', 'Spices'],
-    features: [
-      'Customized multi-level plant layout maximizing gravity flow and minimizing footprint',
-      'Synchronized electrical control panel with interlocked safety sequencing',
-      'Integrated pneumatic dust collection maintaining clean factory working conditions',
-      'Turnkey handover with on-site operator training and commissioning support',
-    ],
-  },
 ];
 
 export const categories = [
@@ -573,7 +552,6 @@ export const categories = [
   'Handling and Conveying',
   'Dust Controlling',
   'Finishing',
-  'Turnkey Solutions',
 ];
 
 export function filterProducts(category = 'All machinery', query = '') {

@@ -41,7 +41,7 @@ export default function AdvancedMachinesPage() {
 
   // Featured flagship machines for the quick horizontal showcase
   const flagshipMachines = useMemo(() => {
-    const ids = [1, 24, 25, 7, 26, 27, 28, 12, 16, 23];
+    const ids = [1, 24, 25, 7, 26, 27, 28, 12, 16];
     return ids.map((id) => machines.find((m) => m.id === id)).filter(Boolean);
   }, []);
 
