@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { machines, categories, company } from "../../Data/Machines";
 import MachineCard from "../MachineCard";
-import { Arrow, Eyebrow } from "../UI";
+import { Arrow } from "../UI";
 
 export default function AdvancedMachinesPage() {
   const [activeCategory, setActiveCategory] = useState("All machinery");
@@ -64,28 +64,29 @@ export default function AdvancedMachinesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50/60 text-slate-800">
-      {/* 1. HERO SECTION */}
-      <section className="relative overflow-hidden bg-slate-900 text-white pt-24 pb-20 px-6 md:px-12 border-b border-slate-800">
+    <div className="min-h-screen bg-slate-50/50 text-slate-800">
+      {/* 1. HERO SECTION: WHITE & ROYAL BLUE */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-blue-50/70 via-white to-slate-50 text-slate-900 pt-24 pb-20 px-6 md:px-12 border-b border-blue-100/80">
         {/* Subtle grid pattern background */}
         <div
-          className="absolute inset-0 opacity-[0.07] pointer-events-none"
+          className="absolute inset-0 opacity-[0.035] pointer-events-none"
           style={{
-            backgroundImage: "radial-gradient(#fff 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(#1d4ed8 1px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
         />
-        {/* Subtle radial glow */}
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" />
+        {/* Subtle royal blue radial glow */}
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-10 left-10 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-6xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase bg-white/10 text-blue-300 border border-white/10 backdrop-blur-md mb-6"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-blue-50 text-blue-700 border border-blue-200/90 shadow-xs mb-6"
           >
-            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
             ENGINEERED IN SOLAPUR, MAHARASHTRA • EST. 2010
           </motion.div>
 
@@ -93,11 +94,11 @@ export default function AdvancedMachinesPage() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6"
           >
             Precision Machinery for
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-cyan-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600">
               Grain & Pulse Processing.
             </span>
           </motion.h1>
@@ -106,43 +107,43 @@ export default function AdvancedMachinesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10"
+            className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10"
           >
             Explore our complete industrial portfolio of cleaning, de-stoning,
             hulling, polishing, grading, and turnkey milling machinery. Built to
             endure continuous multi-shift production.
           </motion.p>
 
-          {/* Quick Metrics Bar */}
+          {/* Quick Metrics Bar: Clean White Cards with Royal Blue Accents */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-slate-800/80"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-blue-100"
           >
-            <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="block text-3xl font-extrabold text-white">
+            <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+              <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">
                 {machines.length}+
               </span>
-              <span className="text-xs uppercase tracking-wider text-slate-400 mt-1 block">
+              <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
                 Industrial Machines
               </span>
             </div>
-            <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="block text-3xl font-extrabold text-white">06</span>
-              <span className="text-xs uppercase tracking-wider text-slate-400 mt-1 block">
+            <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+              <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">06</span>
+              <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
                 Process Categories
               </span>
             </div>
-            <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="block text-3xl font-extrabold text-white">100%</span>
-              <span className="text-xs uppercase tracking-wider text-slate-400 mt-1 block">
+            <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+              <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">100%</span>
+              <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
                 Custom Layouts
               </span>
             </div>
-            <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="block text-3xl font-extrabold text-white">24/7</span>
-              <span className="text-xs uppercase tracking-wider text-slate-400 mt-1 block">
+            <div className="p-5 rounded-2xl bg-white border border-blue-100 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+              <span className="block text-3xl sm:text-4xl font-extrabold text-blue-700">24/7</span>
+              <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">
                 Support & Spares
               </span>
             </div>
@@ -150,15 +151,15 @@ export default function AdvancedMachinesPage() {
         </div>
       </section>
 
-      {/* 2. FLAGSHIP SHOWCASE STRIP */}
-      <section className="py-12 bg-white border-b border-slate-200">
+      {/* 2. FLAGSHIP SHOWCASE STRIP: WHITE & ROYAL BLUE */}
+      <section className="py-12 bg-white border-b border-blue-100/80">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-6">
             <div>
               <span className="text-xs font-bold tracking-widest uppercase text-blue-600 block mb-1">
                 FEATURED HIGHLIGHTS
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
                 Flagship Processing Equipment
               </h2>
             </div>
@@ -167,14 +168,14 @@ export default function AdvancedMachinesPage() {
               <button
                 onClick={() => scrollShowcase("left")}
                 aria-label="Scroll left"
-                className="w-10 h-10 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition shadow-xs"
+                className="w-10 h-10 rounded-full border border-blue-200 bg-white hover:bg-blue-50 text-blue-700 flex items-center justify-center transition shadow-xs font-bold"
               >
                 ←
               </button>
               <button
                 onClick={() => scrollShowcase("right")}
                 aria-label="Scroll right"
-                className="w-10 h-10 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition shadow-xs"
+                className="w-10 h-10 rounded-full border border-blue-200 bg-white hover:bg-blue-50 text-blue-700 flex items-center justify-center transition shadow-xs font-bold"
               >
                 →
               </button>
@@ -198,7 +199,7 @@ export default function AdvancedMachinesPage() {
         </div>
       </section>
 
-      {/* 3. MAIN CATALOGUE & INTERACTIVE FILTER SECTION */}
+      {/* 3. MAIN CATALOGUE & INTERACTIVE FILTER SECTION: WHITE & ROYAL BLUE */}
       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto" id="catalogue">
         {/* Controls Container */}
         <div className="mb-12">
@@ -208,7 +209,7 @@ export default function AdvancedMachinesPage() {
               <span className="text-xs font-bold tracking-widest uppercase text-blue-600 block mb-1">
                 COMPLETE PORTFOLIO
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
                 All Machinery
               </h2>
             </div>
@@ -220,9 +221,9 @@ export default function AdvancedMachinesPage() {
                 placeholder="Search by name, crop or spec..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-600 shadow-xs transition"
+                className="w-full pl-10 pr-4 py-2.5 bg-white border border-blue-200/90 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-600 shadow-xs transition"
               />
-              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm">
+              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-blue-500 text-sm">
                 🔍
               </span>
               {searchQuery && (
@@ -245,10 +246,10 @@ export default function AdvancedMachinesPage() {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium transition-all duration-200 shadow-xs ${
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 shadow-xs ${
                     isSelected
-                      ? "bg-slate-900 text-white shadow-md shadow-slate-900/10"
-                      : "bg-white text-slate-700 hover:bg-slate-100/80 border border-slate-200/80"
+                      ? "bg-blue-600 text-white shadow-md shadow-blue-600/25 border border-blue-600"
+                      : "bg-white text-slate-700 hover:bg-blue-50/60 hover:text-blue-700 border border-slate-200"
                   }`}
                 >
                   <span>{cat}</span>
@@ -270,7 +271,7 @@ export default function AdvancedMachinesPage() {
           <div className="flex items-center justify-between text-xs text-slate-500 mt-4 px-1">
             <span>
               Showing{" "}
-              <strong className="text-slate-800">{filteredMachines.length}</strong>{" "}
+              <strong className="text-slate-900">{filteredMachines.length}</strong>{" "}
               {filteredMachines.length === 1 ? "machine" : "machines"}
               {activeCategory !== "All machinery" && ` in ${activeCategory}`}
               {searchQuery && ` matching "${searchQuery}"`}
@@ -281,7 +282,7 @@ export default function AdvancedMachinesPage() {
                   setActiveCategory("All machinery");
                   setSearchQuery("");
                 }}
-                className="text-blue-700 font-semibold hover:underline"
+                className="text-blue-700 font-bold hover:underline"
               >
                 Reset all filters
               </button>
@@ -303,9 +304,9 @@ export default function AdvancedMachinesPage() {
           </motion.div>
         ) : (
           /* Empty search state */
-          <div className="text-center py-20 bg-white rounded-3xl border border-slate-200/80 p-8">
+          <div className="text-center py-20 bg-white rounded-3xl border border-blue-100 p-8 shadow-sm">
             <span className="text-5xl block mb-4">⚙️</span>
-            <h3 className="text-xl font-bold text-slate-800 mb-2">
+            <h3 className="text-xl font-bold text-slate-900 mb-2">
               No matching machinery found
             </h3>
             <p className="text-sm text-slate-600 max-w-md mx-auto mb-6">
@@ -318,7 +319,7 @@ export default function AdvancedMachinesPage() {
                 setActiveCategory("All machinery");
                 setSearchQuery("");
               }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-900 text-white hover:bg-slate-800 transition"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-blue-600 text-white hover:bg-blue-700 transition shadow-sm"
             >
               Reset Filters
             </button>
@@ -326,17 +327,17 @@ export default function AdvancedMachinesPage() {
         )}
       </section>
 
-      {/* 5. PRECISION MANUFACTURING STANDARDS */}
-      <section className="py-20 bg-slate-900 text-white border-t border-slate-800">
+      {/* 5. PRECISION MANUFACTURING STANDARDS: WHITE & BLUE */}
+      <section className="py-20 bg-gradient-to-b from-white via-blue-50/30 to-slate-50 border-t border-b border-blue-100">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold tracking-widest uppercase text-blue-400 block mb-2">
+            <span className="text-xs font-bold tracking-widest uppercase text-blue-600 block mb-2">
               MANUFACTURING EXCELLENCE
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
               Built for Heavy Industrial Duty
             </h2>
-            <p className="text-slate-400 text-sm mt-3 leading-relaxed">
+            <p className="text-slate-600 text-sm mt-3 leading-relaxed">
               Every machine is built in our Solapur facility using high-grade
               materials, precision CNC machining, and balanced dynamic drives.
             </p>
@@ -367,15 +368,15 @@ export default function AdvancedMachinesPage() {
             ].map((step, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
+                className="p-6 rounded-2xl bg-white border border-blue-100/90 shadow-sm hover:border-blue-300 hover:shadow-lg transition-all duration-300 group"
               >
-                <div className="text-2xl font-mono font-bold text-blue-400 mb-3">
+                <div className="text-2xl font-mono font-extrabold text-blue-600 mb-3 group-hover:scale-105 transition-transform">
                   {step.num}
                 </div>
-                <h4 className="text-base font-semibold text-white mb-2">
+                <h4 className="text-base font-bold text-slate-900 mb-2">
                   {step.title}
                 </h4>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-xs text-slate-600 leading-relaxed">
                   {step.desc}
                 </p>
               </div>
@@ -384,34 +385,40 @@ export default function AdvancedMachinesPage() {
         </div>
       </section>
 
-      {/* 6. PROJECT ENQUIRY CTA */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-950 text-white text-center px-6">
-        <div className="max-w-3xl mx-auto">
-          <span className="text-xs font-bold tracking-widest uppercase text-blue-400 block mb-3">
-            START YOUR PROJECT
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Need Custom Machinery or a Complete Plant?
-          </h2>
-          <p className="text-slate-300 text-base leading-relaxed mb-8">
-            Speak directly with our technical team in Solapur. We provide
-            machinery layouts, quotations, and process advice tailored to your
-            production capacity.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link
-              to="/quote"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-slate-900 bg-white hover:bg-slate-100 transition shadow-lg"
-            >
-              Request a Quotation
-              <Arrow diagonal className="w-4 h-4" />
-            </Link>
-            <a
-              href={`tel:${company.phones[0]}`}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-white/10 hover:bg-white/15 border border-white/15 backdrop-blur-sm transition"
-            >
-              Call +91 {company.phones[0]}
-            </a>
+      {/* 6. PROJECT ENQUIRY CTA: ROYAL BLUE & WHITE */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <div className="relative overflow-hidden bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 text-white text-center px-8 py-16 sm:py-20 rounded-3xl shadow-2xl">
+          {/* Subtle radial glow & pattern */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/20 rounded-full blur-2xl pointer-events-none" />
+
+          <div className="relative max-w-3xl mx-auto z-10">
+            <span className="text-xs font-bold tracking-widest uppercase text-blue-200 block mb-3">
+              START YOUR PROJECT
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-white">
+              Need Custom Machinery or a Complete Plant?
+            </h2>
+            <p className="text-blue-100 text-base leading-relaxed mb-8 max-w-2xl mx-auto">
+              Speak directly with our technical engineering team in Solapur. We provide
+              custom layouts, machinery quotations, and process advice tailored to your
+              target capacity.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Link
+                to="/quote"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-blue-900 bg-white hover:bg-blue-50 transition shadow-lg hover:shadow-xl"
+              >
+                Request a Quotation
+                <Arrow diagonal className="w-4 h-4 text-blue-900" />
+              </Link>
+              <a
+                href={`tel:${company.phones[0]}`}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm transition"
+              >
+                Call +91 {company.phones[0]}
+              </a>
+            </div>
           </div>
         </div>
       </section>
