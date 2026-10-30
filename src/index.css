@@ -2496,6 +2496,247 @@ details[open] .accordion-plus:after {
     height: 330px;
   }
 }
+
+/* Final cascade guard for the mobile header. */
+@media (max-width: 760px) {
+  .site-header .desktop-nav,
+  .site-header .header-enquiry {
+    display: none !important;
+  }
+
+  .site-header .menu-toggle {
+    display: flex !important;
+  }
+}
+
+/* Mobile quality pass: keep every section inside the viewport and make the
+   most important actions comfortable to use on touch screens. */
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+  :root {
+    scroll-padding-top: 76px;
+  }
+
+  .container {
+    width: min(100% - 32px, 540px);
+  }
+
+  .section {
+    padding-block: 64px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2,
+  .intro-grid h2,
+  .expertise-intro h2,
+  .craft-copy h2,
+  .project-cta h2,
+  .factory-banner h2 {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    line-height: 1.08;
+  }
+
+  .header-inner {
+    width: calc(100% - 32px);
+    min-height: 72px;
+    height: auto;
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand > span {
+    min-width: 0;
+    font-size: clamp(15px, 4.6vw, 20px);
+    white-space: nowrap;
+  }
+
+  .brand > span > span {
+    font-size: 8px;
+    letter-spacing: 0.11em;
+  }
+
+  .menu-toggle {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    border-radius: 2px;
+  }
+
+  .mobile-nav {
+    max-height: calc(100svh - 72px);
+    padding: 4px 16px 24px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .mobile-nav a {
+    min-height: 56px;
+    gap: 12px;
+    padding: 15px 0;
+    font-size: clamp(20px, 6vw, 24px);
+  }
+
+  .hero {
+    min-height: min(740px, calc(100svh - 72px));
+    height: auto;
+  }
+
+  .hero-content {
+    padding-top: clamp(54px, 12vw, 80px);
+    padding-bottom: 110px;
+  }
+
+  .hero h1 {
+    max-width: 13ch;
+    font-size: clamp(2.7rem, 12vw, 4.35rem);
+    overflow-wrap: anywhere;
+  }
+
+  .hero-content > p {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  .hero-actions,
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-actions .button {
+    justify-content: space-between;
+  }
+
+  .home-product-grid,
+  .catalogue-grid,
+  .related-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card-image,
+  .catalogue-grid .product-card-image,
+  .related-grid .product-card-image {
+    height: clamp(220px, 62vw, 320px);
+  }
+
+  .product-card h3,
+  .catalogue-grid .product-card h3,
+  .related-grid .product-card h3 {
+    font-size: clamp(1.45rem, 7vw, 2rem);
+  }
+
+  .craft-copy,
+  .enquiry-form {
+    padding: 38px 20px;
+  }
+
+  .craft-values {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-top,
+  .contact-grid,
+  .visit-grid,
+  .product-information,
+  .configuration-grid,
+  .story-grid,
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field input,
+  .field select,
+  .field textarea,
+  .catalogue-search-label input,
+  .catalogue-sort select {
+    min-height: 46px;
+    font-size: 16px;
+  }
+
+  .machinery-category-nav {
+    top: 72px;
+  }
+
+  .machinery-utility-bar,
+  .catalogue-search-bar,
+  .machinery-utility-right {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .catalogue-search-label,
+  .catalogue-search-label input,
+  .catalogue-sort,
+  .catalogue-sort select {
+    width: 100%;
+  }
+
+  .category-section-header {
+    gap: 14px;
+  }
+
+  .category-section-header h2 {
+    font-size: clamp(1.7rem, 8vw, 2.4rem);
+  }
+
+  .page-intro h1,
+  .product-hero-copy h1,
+  .not-found h1 {
+    font-size: clamp(2.35rem, 11vw, 4rem);
+    overflow-wrap: anywhere;
+  }
+
+  .product-hero-photo img,
+  .about-cover > img,
+  .services-cover > img,
+  .visit-grid img {
+    height: clamp(240px, 70vw, 360px);
+  }
+
+  .button {
+    min-height: 50px;
+    padding: 14px 18px;
+  }
+}
+
+/* This must remain at the end of the stylesheet because the enhanced desktop
+   navigation rules are declared later than the original mobile breakpoint. */
+@media (max-width: 760px) {
+  .site-header .desktop-nav,
+  .site-header .header-enquiry {
+    display: none !important;
+  }
+
+  .site-header .menu-toggle {
+    display: flex !important;
+  }
+}
 @media (max-width: 440px) {
   .container {
     width: calc(100% - 40px);
@@ -4011,5 +4252,17 @@ em {
   .category-section-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* Final cascade guard for the mobile header. */
+@media (max-width: 760px) {
+  .site-header .desktop-nav,
+  .site-header .header-enquiry {
+    display: none !important;
+  }
+
+  .site-header .menu-toggle {
+    display: flex !important;
   }
 }
