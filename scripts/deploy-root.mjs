@@ -37,3 +37,4 @@ try {
 } catch {}
 
 console.log("Successfully synced dist build output to repository root for Hostinger!");
+
