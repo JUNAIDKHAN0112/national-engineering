@@ -55,7 +55,7 @@ export default function About() {
               operators who work with the machinery every day.
             </p>
             <p>
-              National Engineering Works is based at Plot No. F-50, MIDC Chincholi, Tal. Mohol, Dist. Solapur, Maharashtra, India. The catalogue includes individual machines
+              National Engineering Works is based at Plot No. C-162, Block C, MIDC Industrial Area, Chincholi, Tal. Mohol, Dist. Solapur – 413255, Maharashtra, India. The catalogue includes individual machines
               and equipment for grain and pulse processing plants. Product
               configuration depends on the crop, process stages and site
               requirements.

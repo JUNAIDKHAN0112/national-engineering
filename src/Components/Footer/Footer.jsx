@@ -39,11 +39,13 @@ export default function Footer() {
           <div>
             <h2>Visit us</h2>
             <p>
-              Plot No. F-50, MIDC Chincholi, Tal. Mohol
+              Plot No. C-162, Block C,
               <br />
-              Dist. Solapur, Maharashtra, India
+              MIDC Industrial Area, Chincholi,
               <br />
-              413255, India
+              Tal. Mohol, Dist. Solapur – 413255,
+              <br />
+              Maharashtra, India
             </p>
             <a
               href={company.maps}

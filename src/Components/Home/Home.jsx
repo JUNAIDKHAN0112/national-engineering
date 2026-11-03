@@ -255,8 +255,8 @@ export default function Home() {
             </h2>
             <p>
               National Engineering Works is a manufacturer of grain and pulse
-              processing machinery based at Plot No. F-50, MIDC Chincholi, Tal. Mohol,
-              Dist. Solapur, Maharashtra. Explore individual machines or discuss a processing
+              processing machinery based at Plot No. C-162, Block C, MIDC Industrial Area,
+              Chincholi, Tal. Mohol, Dist. Solapur – 413255, Maharashtra, India. Explore individual machines or discuss a processing
               plant requirement with our team.
             </p>
             <address className="not-italic">

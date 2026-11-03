@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed">
               National Engineering Works (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;), operating
-              from Plot No. F-50, MIDC Chincholi, Tal. Mohol, Dist. Solapur, Maharashtra, India, is
+              from Plot No. C-162, Block C, MIDC Industrial Area, Chincholi, Tal. Mohol, Dist. Solapur – 413255, Maharashtra, India, is
               committed to respecting and safeguarding your privacy. This Privacy
               Policy outlines our practices regarding information collected through
               our website, quotation inquiries, technical consultations, and
@@ -159,7 +159,7 @@ export default function PrivacyPolicy() {
             </p>
             <div className="p-5 rounded-2xl bg-blue-50/60 border border-blue-200/80 text-sm space-y-1.5">
               <p className="font-bold text-slate-900">{company.name}</p>
-              <p className="text-slate-600">Plot No. F-50, MIDC Chincholi, Tal. Mohol, Dist. Solapur, Maharashtra, India</p>
+              <p className="text-slate-600">Plot No. C-162, Block C, MIDC Industrial Area, Chincholi, Tal. Mohol, Dist. Solapur – 413255, Maharashtra, India</p>
               <p className="text-slate-600">
                 Email:{" "}
                 <a href={`mailto:${company.email}`} className="text-blue-700 font-semibold hover:underline">

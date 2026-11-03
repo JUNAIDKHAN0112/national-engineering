@@ -5,7 +5,7 @@ export const company = {
   email: 'nationalengineering973@gmail.com',
   phones: ['9634781042', '6395233717', '9579802492'],
   enquiryPhone: '6395233717',
-  address: 'Plot No. F-50, MIDC Chincholi, Tal. Mohol, Dist. Solapur, Maharashtra, India',
+  address: 'Plot No. C-162, Block C, MIDC Industrial Area, Chincholi, Tal. Mohol, Dist. Solapur – 413255, Maharashtra, India',
   maps: 'https://www.google.com/maps/place/17%C2%B045\'47.3%22N+75%C2%B049\'15.5%22E/@17.7631397,75.818409,17z/data=!3m1!4b1!4m4!3m3!8m2!3d17.7631397!4d75.8209839?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D',
 };
 

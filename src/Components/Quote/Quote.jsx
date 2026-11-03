@@ -100,9 +100,13 @@ export default function GetQuote() {
             <div className="contact-detail">
               <span className="small-label">FACTORY & OFFICE</span>
               <p>
-                Plot No. F-50, MIDC Chincholi, Tal. Mohol
+                Plot No. C-162, Block C,
                 <br />
-                Dist. Solapur, Maharashtra, India
+                MIDC Industrial Area, Chincholi,
+                <br />
+                Tal. Mohol, Dist. Solapur – 413255,
+                <br />
+                Maharashtra, India
               </p>
               <a
                 href={company.maps}

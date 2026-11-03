@@ -52,8 +52,8 @@ export default function TermsConditions() {
               equipment fabrications, turnkey installations, and technical support
               provided by <strong>National Engineering Works</strong> (hereinafter
               referred to as &quot;NEW&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;the Manufacturer&quot;),
-              headquartered at Plot No. F-50, MIDC Chincholi, Tal. Mohol,
-              Dist. Solapur, Maharashtra, India. By placing a purchase order, accepting a commercial quotation,
+              headquartered at Plot No. C-162, Block C, MIDC Industrial Area, Chincholi,
+              Tal. Mohol, Dist. Solapur – 413255, Maharashtra, India. By placing a purchase order, accepting a commercial quotation,
               or commissioning machinery from us, the client (referred to as &quot;the
               Buyer&quot; or &quot;Client&quot;) unconditionally accepts and agrees to be bound by
               these terms.
@@ -231,7 +231,7 @@ export default function TermsConditions() {
             </p>
             <div className="p-5 rounded-2xl bg-blue-50/60 border border-blue-200/80 text-sm space-y-1.5">
               <p className="font-bold text-slate-900">{company.name} — Commercial Department</p>
-              <p className="text-slate-600">Plot No. F-50, MIDC Chincholi, Tal. Mohol, Dist. Solapur, Maharashtra, India</p>
+              <p className="text-slate-600">Plot No. C-162, Block C, MIDC Industrial Area, Chincholi, Tal. Mohol, Dist. Solapur – 413255, Maharashtra, India</p>
               <p className="text-slate-600">
                 Email:{" "}
                 <a href={`mailto:${company.email}`} className="text-blue-700 font-semibold hover:underline">
